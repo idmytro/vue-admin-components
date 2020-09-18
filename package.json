@@ -8,7 +8,7 @@
     "url": "git@git.edadev.ru:cisar/vue-admin-components.git"
   },
   "keywords": [],
-  "author": "Dmytro Cisar <cisar@yandex-team.ru>",
+  "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
   "license": "FSFUL",
   "scripts": {
     "serve": "vue-cli-service serve",
