@@ -2,7 +2,7 @@
   <div
     class="base-layout-list"
     :class="[
-      hasAside && asideVisible ? 'base-layout-list--with-aside' : '',
+      hasAside && asideVisible ? 'base-layout-list--with-aside' : 'base-layout-list--without-aside',
       hasAsideFooter ? '' : 'base-layout-list--without-aside-footer'
     ]"
   >
@@ -126,19 +126,30 @@ export default {
   display: flex;
   flex-grow: 1;
   height: calc(100vh - var(--height-header));
-  margin-top: calc(0px - var(--space-layout));
+  /* margin-top: calc(0px - var(--space-layout)); */
+}
+
+.base-layout-list--without-aside {
+  margin-left: var(--space-layout);
 }
 
 .base-layout-list__aside {
   width: var(--width-aside);
   flex-shrink: 0;
-  margin-top: 20px;
+  margin-top: var(--space-layout);
 }
 
 .base-layout-list__main {
   display: flex;
   flex-direction: column;
-  /* margin-top: var(--space-layout); */
+  margin-top: var(--space-layout);
+}
+
+.base-layout-list--with-aside .base-layout-list__main {
+  width: calc(100vw - var(--width-sidemenu) - var(--width-aside));
+}
+
+.base-layout-list--without-aside .base-layout-list__main {
   width: calc(100vw - var(--width-sidemenu) - var(--space-layout));
 }
 
@@ -172,10 +183,6 @@ export default {
   background-color: #fff;
   padding-bottom: var(--space-layout);
   padding-left: var(--space-layout);
-}
-
-.base-layout-list--with-aside {
-  /* margin-left: calc(0px - var(--space-layout)); */
 }
 
 .base-layout-list__column-body {
@@ -213,10 +220,10 @@ export default {
   width: 100%;
 }
 
-.entity-layout__narrow-wrapper {
+/* .entity-layout__narrow-wrapper {
   max-width: 800px;
   position: relative;
-}
+} */
 
 .base-layout-list__pagination {
   padding: 2px;
@@ -225,8 +232,6 @@ export default {
 
 .base-layout-list__aside-header {
   flex-shrink: 0;
-  /* padding-left: var(--space-layout);
-  padding-right: var(--space-layout); */
   margin-bottom: var(--space-layout);
 }
 
