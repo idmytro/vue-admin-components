@@ -1,3 +1,3 @@
 module.exports = {
-  extends: 'vue-admin',
+  extends: '@vue-admin-ui',
 };

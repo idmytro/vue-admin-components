@@ -2,10 +2,9 @@
   "name": "vue-admin-components",
   "version": "1.0.0",
   "description": "",
-
   "repository": {
     "type": "git",
-    "url": "git@git.edadev.ru:cisar/vue-admin-components.git"
+    "url": "idmytro/vue-admin-components"
   },
   "keywords": [],
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
@@ -26,18 +25,18 @@
     "@storybook/addon-links": "^6.0.21",
     "@storybook/vue": "^6.0.21",
     "@vue/cli-service": "~4.5.0",
+    "@vue-admin-ui/eslint-config": "^1.0.11",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1",
     "vue-template-compiler": "^2.6.11",
     "eslint": "^7.9.0",
     "eslint-config-semistandard": "^15.0.1",
     "eslint-config-standard": "^14.1.1",
-    "eslint-config-vue-admin": "^1.0.2",
     "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^7.0.0-beta.2"
+    "eslint-plugin-vue": "^7.0.0-beta.3"
   }
 }
