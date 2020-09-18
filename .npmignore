@@ -9,6 +9,7 @@ src/main.js
 
 .editorconfig
 .eslintrc.js
+.browserslistrc
 
 package-lock.json
 
