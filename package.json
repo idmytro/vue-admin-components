@@ -1,10 +1,11 @@
 {
-  "name": "vue-admin-components",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vue-admin-ui-components",
+  "version": "1.0.1",
+  "description": "Vue Admin UI components",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "idmytro/vue-admin-components"
+    "url": "idmytro/vue-admin-ui-components"
   },
   "keywords": [],
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
