@@ -1,0 +1,143 @@
+:root {
+	--box-shadow-focus: 0 0 0 2px var(--color-accient-light);
+}
+
+.accient-button,
+.regular-button,
+.secondary-button {
+	font-size: var(--text-menu);
+	letter-spacing: var(--tracking-wide);
+	font-weight: bold;
+	border-radius: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.accient-button,
+.regular-button,
+.secondary-button {
+	transition-duration: var(--transition-duration);
+	transition-property: var(--transition-property-form-item);
+}
+
+/* Для кнопок в которых только иконка, без текста */
+.icon-button {
+	width: 40px;
+	padding: 0;
+}
+
+.label-button {
+  padding: 0;
+  border-width: 0;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+.white-button:focus,
+.regular-button:focus,
+.accient-button:focus,
+.secondary-button:focus,
+.label-button:focus {
+	outline: 0;
+	box-shadow: var(--box-shadow-focus);
+}
+
+.accient-button,
+.regular-button {
+	border-style: solid;
+}
+
+.accient-button:active,
+.regular-button:active,
+.label-button:active {
+	box-shadow: none;
+}
+
+.accient-button[disabled],
+.regular-button[disabled],
+.secondary-button[disabled] {
+	cursor: not-allowed;
+}
+
+.accient-button--theme-success {
+	--color-accient: var(--color-success);
+	--color-accient-light: var(--color-success-light);
+	--color-accient-dark: var(--color-success-dark);
+	--color-accient-darker: var(--color-success-darker);
+}
+
+.accient-button--theme-danger {
+	--color-accient: var(--color-danger);
+	--color-accient-light: var(--color-danger-light);
+	--color-accient-dark: var(--color-danger-dark);
+	--color-accient-darker: var(--color-danger-darker);
+}
+
+.accient-button {
+	background-color: var(--color-accient);
+	color: var(--color-white);
+	border-width: 0;
+}
+
+.accient-button[disabled] {
+  background-color: var(--color-accient-light);
+}
+
+.accient-button:not([disabled]):hover {
+	background-color: var(--color-accient-dark);
+}
+
+.accient-button:active {
+	background-color: var(--color-accient-darker) !important;
+}
+
+.regular-button {
+	background-color: var(--color-white);
+	color: var(--color-accient-dark);
+	border-color: var(--color-accient);
+	border-width: 2px;
+}
+
+.regular-button:not([disabled]):hover {
+	color: var(--color-accient-darker);
+	border-color: var(--color-accient-darker);
+}
+
+.regular-button:active {
+	background-color: var(--color-background);
+}
+
+.secondary-button {
+	background-color: var(--color-white);
+	color: var(--color-primary-text);
+	font-weight: normal;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #dde0e6;
+}
+
+.secondary-button:not([disabled]):hover,
+.secondary-button:active {
+	background-color: var(--color-background);
+}
+
+.regular-button[disabled],
+.secondary-button[disabled] {
+  opacity: .5;
+}
+
+.secondary-button[disabled] {
+  color: var(--color-plain-text);
+}
+
+.white-button {
+	border-width: 0;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.secondary-button [class^="el-icon-"] {
+	color: inherit;
+}

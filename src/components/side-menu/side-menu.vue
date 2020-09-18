@@ -32,6 +32,8 @@ import SideMenuIcons from './side-menu-icons.vue';
 export default {
   components: { SideMenuItem, SideMenuIcons },
 };
+
+export { SideMenuItem };
 </script>
 
 <style>
