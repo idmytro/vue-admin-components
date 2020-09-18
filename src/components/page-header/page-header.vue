@@ -47,6 +47,7 @@ export default {
   background-color: #fff;
   position: sticky;
   z-index: 10;
+  top: 0;
 }
 
 .page-header::after {
