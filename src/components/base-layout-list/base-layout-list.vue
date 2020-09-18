@@ -138,7 +138,7 @@ export default {
 .base-layout-list__main {
   display: flex;
   flex-direction: column;
-  margin-top: var(--space-layout);
+  /* margin-top: var(--space-layout); */
   width: calc(100vw - var(--width-sidemenu) - var(--space-layout));
 }
 
@@ -175,7 +175,7 @@ export default {
 }
 
 .base-layout-list--with-aside {
-  margin-left: calc(0px - var(--space-layout));
+  /* margin-left: calc(0px - var(--space-layout)); */
 }
 
 .base-layout-list__column-body {

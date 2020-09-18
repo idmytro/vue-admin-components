@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+}
+
+body {
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
+  color: #2c3e50;
+  background: #F3F6FA;
+}
+
+input {
+  background-color: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0
+}
+
+p {
+  margin: 0;
+}

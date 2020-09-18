@@ -1,9 +1,10 @@
 .vscode
 .storybook
 public
+stories
+stories-example
 
 src/assets
-src/stories
 src/App.vue
 src/main.js
 
