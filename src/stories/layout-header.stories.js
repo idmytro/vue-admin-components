@@ -1,6 +1,6 @@
 import '../styles/variables.css';
 import '../styles/base.css';
-import LayoutHeader from '../components/layout-header/layout-header.vue';
+import { LayoutHeader } from '../..';
 
 export default {
   title: 'Components/layout-header',

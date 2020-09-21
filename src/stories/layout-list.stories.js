@@ -1,5 +1,5 @@
-import LayoutList from '../components/layout-list/layout-list.vue';
 import '../styles/base.css';
+import { LayoutList, LayoutHeader } from '../..';
 
 export default {
   title: 'Components/layout-list',
@@ -7,12 +7,13 @@ export default {
 };
 
 const Template = () => ({
-  components: { LayoutList },
+  components: { LayoutList, LayoutHeader },
   template: `
-    <layout-list>
-      <div>MAIN</div>
-    </layout-list>
+    <div>
+      <layout-header></layout-header>
+      <layout-list></layout-list>
+    <div>
   `,
 });
 
-export const WithoutAside = Template.bind({});
+export const WithAside = Template.bind({});

@@ -1,6 +1,5 @@
-import BaseLayout from '../components/base-layout/base-layout.vue';
-import SideMenu from '../components/side-menu/side-menu.vue';
 import '../styles/base.css';
+import { BaseLayout, SideMenu } from '../..';
 
 export default {
   title: 'Components/base-layout',

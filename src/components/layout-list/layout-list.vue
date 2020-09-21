@@ -118,7 +118,6 @@ export default {
 .layout-list {
   --height-header: 60px;
   --space-layout: 20px;
-  --width-sidemenu: 72px;
   --height-button: 40px;
   --width-aside: 280px;
 
@@ -146,11 +145,11 @@ export default {
 }
 
 .layout-list--with-aside .layout-list__main {
-  width: calc(100vw - var(--width-sidemenu) - var(--width-aside));
+  width: calc(100% - var(--width-aside));
 }
 
 .layout-list--without-aside .layout-list__main {
-  width: calc(100vw - var(--width-sidemenu) - var(--space-layout));
+  width: calc(100% - var(--space-layout));
 }
 
 .layout-list__main-body {

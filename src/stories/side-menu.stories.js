@@ -1,4 +1,4 @@
-import SideMenu from '../components/side-menu/side-menu.vue';
+import { SideMenu } from '../..';
 
 export default {
   title: 'Components/side-menu',
