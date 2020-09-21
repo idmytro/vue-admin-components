@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style>
-.base-layout-list {
+.layout-list {
   --height-header: 60px;
   --space-layout: 20px;
   --width-sidemenu: 72px;
@@ -129,31 +129,31 @@ export default {
   /* margin-top: calc(0px - var(--space-layout)); */
 }
 
-.base-layout-list--without-aside {
+.layout-list--without-aside {
   margin-left: var(--space-layout);
 }
 
-.base-layout-list__aside {
+.layout-list__aside {
   width: var(--width-aside);
   flex-shrink: 0;
   margin-top: var(--space-layout);
 }
 
-.base-layout-list__main {
+.layout-list__main {
   display: flex;
   flex-direction: column;
   margin-top: var(--space-layout);
 }
 
-.base-layout-list--with-aside .base-layout-list__main {
+.layout-list--with-aside .layout-list__main {
   width: calc(100vw - var(--width-sidemenu) - var(--width-aside));
 }
 
-.base-layout-list--without-aside .base-layout-list__main {
+.layout-list--without-aside .layout-list__main {
   width: calc(100vw - var(--width-sidemenu) - var(--space-layout));
 }
 
-.base-layout-list__main-body {
+.layout-list__main-body {
   border-top-left-radius: var(--rounded-layout);
   background: #fff;
   padding: 20px 0 0 20px;
@@ -162,8 +162,8 @@ export default {
   flex-direction: column;
 }
 
-.base-layout-list__aside-column,
-.base-layout-list__main-column {
+.layout-list__aside-column,
+.layout-list__main-column {
   position: relative;
   height: 100%;
   flex-grow: 1;
@@ -171,52 +171,52 @@ export default {
   flex-direction: column;
 }
 
-.base-layout-list__aside-column {
+.layout-list__aside-column {
   padding: var(--space-layout);
   padding-top: 2px;
   margin-top: -2px;
   overflow-y: auto;
 }
 
-.base-layout-list__main-column {
+.layout-list__main-column {
   border-top-left-radius: var(--rounded-layout);
   background-color: #fff;
   padding-bottom: var(--space-layout);
   padding-left: var(--space-layout);
 }
 
-.base-layout-list__column-body {
+.layout-list__column-body {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.base-layout-list__column-footer {
+.layout-list__column-footer {
   flex-shrink: 0;
   margin-top: var(--space-layout);
   min-height: var(--height-button);
 }
 
-.base-layout-list--without-aside-footer .base-layout-list__aside-footer {
+.layout-list--without-aside-footer .layout-list__aside-footer {
   margin-top: 0;
   min-height: auto;
 }
 
-.base-layout-list__table-wrap {
+.layout-list__table-wrap {
   flex-grow: 1;
   overflow: hidden;
 }
 
-.base-layout-list__aside .el-select {
+.layout-list__aside .el-select {
   width: 100%;
 }
 
-.base-layout-list-list__aside .el-date-editor--daterange {
+.layout-list-list__aside .el-date-editor--daterange {
   width: 100%;
 }
 
-.base-layout-list__aside .el-date-editor.el-input,
-.base-layout-list__aside .el-date-editor.el-input__inner {
+.layout-list__aside .el-date-editor.el-input,
+.layout-list__aside .el-date-editor.el-input__inner {
   width: 100%;
 }
 
@@ -225,17 +225,17 @@ export default {
   position: relative;
 } */
 
-.base-layout-list__pagination {
+.layout-list__pagination {
   padding: 2px;
   margin: -2px;
 }
 
-.base-layout-list__aside-header {
+.layout-list__aside-header {
   flex-shrink: 0;
   margin-bottom: var(--space-layout);
 }
 
-.base-layout-list__filters-button {
+.layout-list__filters-button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -248,19 +248,19 @@ export default {
   margin-right: 10px;
 }
 
-.base-layout-list__filters-button:focus {
+.layout-list__filters-button:focus {
   box-shadow: none;
   outline: none;
 }
 
-.base-layout-list__filters-button--expanded {
+.layout-list__filters-button--expanded {
   display: block;
   width: 100%;
   text-align: left;
   margin-right: 0;
 }
 
-.base-layout-list__filters-button::after {
+.layout-list__filters-button::after {
   display: block;
   top: 0;
   right: 0;
@@ -277,24 +277,24 @@ export default {
   transition-duration: var(--transition-duration);
 }
 
-.base-layout-list__filters-button--expanded::after {
+.layout-list__filters-button--expanded::after {
   content:"\e6de";
 }
 
-.base-layout-list__filters-button:focus::after {
+.layout-list__filters-button:focus::after {
   box-shadow: var(--box-shadow-focus);
 }
 
-.base-layout-list__filters-button:focus::after,
-.base-layout-list__filters-button:hover::after {
+.layout-list__filters-button:focus::after,
+.layout-list__filters-button:hover::after {
   background-color: #e9eaf0;
 }
 
-.base-layout-list__main-header {
+.layout-list__main-header {
   margin-bottom: 16px;
 }
 
-.base-layout-list__main-header .el-tag {
+.layout-list__main-header .el-tag {
   margin-right: 5px;
   margin-bottom: 5px;
 }
