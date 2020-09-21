@@ -1,60 +1,60 @@
 <template>
   <div
-    class="base-layout-list"
+    class="layout-list"
     :class="[
-      hasAside && asideVisible ? 'base-layout-list--with-aside' : 'base-layout-list--without-aside',
-      hasAsideFooter ? '' : 'base-layout-list--without-aside-footer'
+      hasAside && asideVisible ? 'layout-list--with-aside' : 'layout-list--without-aside',
+      hasAsideFooter ? '' : 'layout-list--without-aside-footer'
     ]"
   >
     <aside
       v-if="hasAside && asideVisible"
-      class="base-layout-list__aside"
+      class="layout-list__aside"
     >
-      <div class="base-layout-list__aside-column">
+      <div class="layout-list__aside-column">
         <div
           v-if="foldableAside"
-          class="base-layout-list__aside-header"
+          class="layout-list__aside-header"
         >
           <button
             ref="asideToggle"
             type="button"
-            class="label-button base-layout-list__filters-button base-layout-list__filters-button--expanded"
+            class="label-button layout-list__filters-button layout-list__filters-button--expanded"
             @click="toggleAsideVisible(false)"
           >
             Фильтры
           </button>
         </div>
-        <div class="base-layout-list__column-body">
+        <div class="layout-list__column-body">
           <slot name="aside-body"></slot>
         </div>
 
-        <div class="base-layout-list__column-footer base-layout-list__aside-footer">
+        <div class="layout-list__column-footer layout-list__aside-footer">
           <slot name="aside-footer"></slot>
         </div>
       </div>
     </aside>
 
-    <main class="base-layout-list__main">
+    <main class="layout-list__main">
       <div
         v-if="foldableAside"
-        :class="mainHeaderVisible && 'base-layout-list__main-header'"
+        :class="mainHeaderVisible && 'layout-list__main-header'"
       >
         <button
           v-if="!asideVisible"
           ref="mainToggle"
           type="button"
-          class="label-button base-layout-list__filters-button"
+          class="label-button layout-list__filters-button"
           @click="toggleAsideVisible(true)"
         >
           Фильтры
         </button>
         <slot name="filters"></slot>
       </div>
-      <div class="base-layout-list__main-column flex flex-col overflow-hidden">
-        <div class="base-layout-list__column-body base-layout-list__main-body">
+      <div class="layout-list__main-column flex flex-col overflow-hidden">
+        <div class="layout-list__column-body layout-list__main-body">
           <slot name="main-body"></slot>
         </div>
-        <div class="base-layout-list__column-footer base-layout-list__main-footer">
+        <div class="layout-list__column-footer layout-list__main-footer">
           <slot name="main-footer"></slot>
         </div>
       </div>
