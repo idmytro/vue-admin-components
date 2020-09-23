@@ -1,8 +1,8 @@
 :root {
-	--box-shadow-focus: 0 0 0 2px var(--color-accient-light);
+	--box-shadow-focus: 0 0 0 2px var(--color-accent-light);
 }
 
-.accient-button,
+.accent-button,
 .regular-button,
 .secondary-button {
 	font-size: var(--text-menu);
@@ -15,7 +15,7 @@
 	cursor: pointer;
 }
 
-.accient-button,
+.accent-button,
 .regular-button,
 .secondary-button {
 	transition-duration: var(--transition-duration);
@@ -37,72 +37,72 @@
 
 .white-button:focus,
 .regular-button:focus,
-.accient-button:focus,
+.accent-button:focus,
 .secondary-button:focus,
 .label-button:focus {
 	outline: 0;
 	box-shadow: var(--box-shadow-focus);
 }
 
-.accient-button,
+.accent-button,
 .regular-button {
 	border-style: solid;
 }
 
-.accient-button:active,
+.accent-button:active,
 .regular-button:active,
 .label-button:active {
 	box-shadow: none;
 }
 
-.accient-button[disabled],
+.accent-button[disabled],
 .regular-button[disabled],
 .secondary-button[disabled] {
 	cursor: not-allowed;
 }
 
-.accient-button--theme-success {
-	--color-accient: var(--color-success);
-	--color-accient-light: var(--color-success-light);
-	--color-accient-dark: var(--color-success-dark);
-	--color-accient-darker: var(--color-success-darker);
+.accent-button--theme-success {
+	--color-accent: var(--color-success);
+	--color-accent-light: var(--color-success-light);
+	--color-accent-dark: var(--color-success-dark);
+	--color-accent-darker: var(--color-success-darker);
 }
 
-.accient-button--theme-danger {
-	--color-accient: var(--color-danger);
-	--color-accient-light: var(--color-danger-light);
-	--color-accient-dark: var(--color-danger-dark);
-	--color-accient-darker: var(--color-danger-darker);
+.accent-button--theme-danger {
+	--color-accent: var(--color-danger);
+	--color-accent-light: var(--color-danger-light);
+	--color-accent-dark: var(--color-danger-dark);
+	--color-accent-darker: var(--color-danger-darker);
 }
 
-.accient-button {
-	background-color: var(--color-accient);
+.accent-button {
+	background-color: var(--color-accent);
 	color: var(--color-white);
 	border-width: 0;
 }
 
-.accient-button[disabled] {
-  background-color: var(--color-accient-light);
+.accent-button[disabled] {
+  background-color: var(--color-accent-light);
 }
 
-.accient-button:not([disabled]):hover {
-	background-color: var(--color-accient-dark);
+.accent-button:not([disabled]):hover {
+	background-color: var(--color-accent-dark);
 }
 
-.accient-button:active {
-	background-color: var(--color-accient-darker) !important;
+.accent-button:active {
+	background-color: var(--color-accent-darker) !important;
 }
 
 .regular-button {
 	background-color: var(--color-white);
-	color: var(--color-accient-dark);
-	border-color: var(--color-accient);
+	color: var(--color-accent-dark);
+	border-color: var(--color-accent);
 	border-width: 2px;
 }
 
 .regular-button:not([disabled]):hover {
-	color: var(--color-accient-darker);
-	border-color: var(--color-accient-darker);
+	color: var(--color-accent-darker);
+	border-color: var(--color-accent-darker);
 }
 
 .regular-button:active {

@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "repository": {
@@ -25,11 +25,10 @@
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/vue": "^6.0.21",
-    "@vue/cli-service": "~4.5.0",
     "@vue-admin-ui/eslint-config": "^1.0.11",
+    "@vue-admin-ui/tailwindcss-config": "^1.0.2",
+    "@vue/cli-service": "~4.5.0",
     "babel-loader": "^8.1.0",
-    "react-is": "^16.13.1",
-    "vue-template-compiler": "^2.6.11",
     "eslint": "^7.9.0",
     "eslint-config-semistandard": "^15.0.1",
     "eslint-config-standard": "^14.1.1",
@@ -38,6 +37,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^7.0.0-beta.3"
+    "eslint-plugin-vue": "^7.0.0-beta.3",
+    "react-is": "^16.13.1",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "@vue-admin-ui/tailwindcss-config": "^1.0.2"
   }
 }
