@@ -247,7 +247,7 @@ export default {
   margin-right: 10px;
 }
 
-.layout-list__filters-button:focus {
+.layout-list .layout-list__filters-button:focus {
   box-shadow: none;
   outline: none;
 }
