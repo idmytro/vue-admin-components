@@ -1,5 +1,10 @@
-<template>
-  <div class="side-menu">
+import SideMenuItem from './side-menu-item.vue';
+import SideMenuIcons from './side-menu-icons.vue';
+
+export default {
+  components: { SideMenuItem, SideMenuIcons },
+  template: `
+    <div class="side-menu">
     <side-menu-item
       type="logo"
       to="/"
@@ -23,17 +28,7 @@
 
     <side-menu-icons></side-menu-icons>
   </div>
-</template>
-
-<script>
-import SideMenuItem from './side-menu-item.vue';
-import SideMenuIcons from './side-menu-icons.vue';
-
-export default {
-  components: { SideMenuItem, SideMenuIcons },
+  `,
 };
 
 export { SideMenuItem };
-</script>
-
-<style src="./side-menu.css"></style>

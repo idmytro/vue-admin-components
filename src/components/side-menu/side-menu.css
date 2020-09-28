@@ -1,0 +1,18 @@
+.side-menu {
+  flex-shrink: 0;
+  width: 72px;
+  background-color: #2E384D;
+  display: grid;
+  grid-template-rows: 54px 1fr 68px;
+  grid-gap: 6px;
+}
+
+.side-menu__list {
+  height: calc(100vh - 54px - 68px - 12px);
+  overflow-y: auto;
+}
+
+.side-menu__list .side-menu-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
