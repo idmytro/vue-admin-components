@@ -1,4 +1,6 @@
-<template>
+<template
+  id="LayoutList"
+>
   <div
     class="layout-list"
     :class="[
@@ -63,55 +65,61 @@
 </template>
 
 <script>
-export default {
-  props: {
-    hasAside: {
-      type: Boolean,
-      default: true,
+((global) => {
+  const component = {
+    props: {
+      hasAside: {
+        type: Boolean,
+        default: true,
+      },
+      foldableAside: {
+        type: Boolean,
+        default: false,
+      },
+      foldedAsideKey: {
+        type: String,
+        default: '',
+      },
     },
-    foldableAside: {
-      type: Boolean,
-      default: false,
+    data () {
+      return {
+        asideVisible: true,
+      };
     },
-    foldedAsideKey: {
-      type: String,
-      default: '',
+    computed: {
+      hasAsideFooter () {
+        return !!this.$slots['aside-footer'];
+      },
+      mainHeaderVisible () {
+        return !!this.$slots.filters || !this.asideVisible;
+      },
     },
-  },
-  data () {
-    return {
-      asideVisible: true,
-    };
-  },
-  computed: {
-    hasAsideFooter () {
-      return !!this.$slots['aside-footer'];
-    },
-    mainHeaderVisible () {
-      return !!this.$slots.filters || !this.asideVisible;
-    },
-  },
-  created () {
-    if (this.foldedAsideKey) {
-      this.asideVisible = !localStorage.getItem(this.foldedAsideKey) || !this.foldableAside;
-    }
-  },
-  methods: {
-    toggleAsideVisible (value) {
+    created () {
       if (this.foldedAsideKey) {
-        value
-          ? localStorage.removeItem(this.foldedAsideKey)
-          : localStorage.setItem(this.foldedAsideKey, !value);
+        this.asideVisible = !localStorage.getItem(this.foldedAsideKey) || !this.foldableAside;
       }
-
-      this.asideVisible = value;
-      this.$nextTick(() => {
-        const nextButton = value ? this.$refs.asideToggle : this.$refs.mainToggle;
-        if (nextButton) nextButton.focus();
-      });
     },
-  },
-};
+    methods: {
+      toggleAsideVisible (value) {
+        if (this.foldedAsideKey) {
+          value
+            ? localStorage.removeItem(this.foldedAsideKey)
+            : localStorage.setItem(this.foldedAsideKey, !value);
+        }
+
+        this.asideVisible = value;
+        this.$nextTick(() => {
+          const nextButton = value ? this.$refs.asideToggle : this.$refs.mainToggle;
+          if (nextButton) nextButton.focus();
+        });
+      },
+    },
+  };
+  global.components.LayoutList = global.Vue.component('LayoutList', {
+    ...component,
+    template: '#LayoutList',
+  });
+})(window);
 </script>
 
 <style src="./layout-list.css"></style>
