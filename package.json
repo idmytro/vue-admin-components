@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "repository": {
@@ -24,7 +24,7 @@
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
-    "@storybook/vue": "^6.0.21",
+    "@storybook/vue": "6.0.26",
     "@vue-admin-ui/eslint-config": "^1.0.11",
     "@vue-admin-ui/tailwindcss-config": "^1.0.2",
     "@vue/cli-service": "~4.5.0",
