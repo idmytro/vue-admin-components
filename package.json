@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "1.8.6",
+  "version": "1.9.0",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "repository": {
@@ -17,6 +17,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "element-ui": "^2.14.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {

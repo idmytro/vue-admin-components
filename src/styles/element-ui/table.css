@@ -1,0 +1,110 @@
+.el-table::before,
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  background-color: transparent !important;
+}
+
+.el-table th,
+.el-table tr {
+  background-color: #F3F6FA !important;
+}
+
+.el-table th>.cell {
+	display: flex;
+	align-items: center;
+}
+
+.el-table th>.cell span:first-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-shrink: 1;
+	white-space: nowrap;
+}
+
+.el-table .cell {
+  word-break: break-word;
+}
+
+.el-table td .cell {
+  line-height: unset;
+}
+
+.el-table th,
+.el-table td {
+  border-bottom-width: 0 !important;
+}
+
+.el-table__row td {
+  background-color: #fff !important;
+}
+
+.el-table__row td:first-child {
+  border-radius: 8px 0 0 8px
+}
+
+.el-table__row td:last-child {
+  border-radius: 0 8px 8px 0
+}
+
+.el-table__body {
+  border-collapse:separate;
+  border-spacing:0 8px;
+}
+
+/* odd */
+.el-table--striped .el-table__body .el-table__row td {
+	background-color: #fff !important;
+}
+
+/* even */
+.el-table--striped .el-table__body .el-table__row--striped td {
+	background-color: var(--color-background) !important;
+}
+
+/* custom class el-table__row--warning */
+.el-table .el-table__body .el-table__row--warning td {
+	background-color: var(--color-warning-light) !important;
+}
+
+.el-table--clickable-rows .el-table__row {
+	cursor: pointer;
+}
+
+.el-table--clickable-rows.el-table--striped .el-table__body .hover-row td {
+	background-color: var(--color-background-dark) !important;
+}
+
+.el-table--striped .el-table__body .el-table__row td.last-column {
+	border-top-right-radius: var(--rounded-layout);
+	border-bottom-right-radius: var(--rounded-layout);
+}
+
+.el-table--striped .el-table__body .hover-row td.gap-column,
+.el-table--striped .el-table__body .el-table__row--striped td.gap-column {
+	background-color: #fff !important;
+}
+
+.el-table-column--selection .cell {
+	padding-left: 14px !important;
+}
+
+.el-table .cell {
+  line-height: unset;
+}
+
+/* Горизонтальные отступы в ячейках */
+.el-table {
+	--cell-px: 5px;
+}
+.el-table th>.cell {
+		padding-left: var(--cell-px);
+		padding-right: var(--cell-px);
+}
+.el-table .cell {
+	padding-right: var(--cell-px);
+}
+.el-table .cell,
+.el-table--border td:first-child .cell,
+.el-table--border th:first-child .cell {
+	padding-left: var(--cell-px);
+}

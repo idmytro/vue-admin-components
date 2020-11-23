@@ -1,0 +1,34 @@
+.el-switch__core {
+	width: 36px !important;
+	box-shadow: 0 0 0 2px var(--color-icons);
+	border: 2px solid #fff;
+	background-color: #fff;
+}
+
+.el-switch__core::after {
+	background-color: var(--color-icons);
+	top: 0;
+	left: 0;
+}
+
+.el-switch.is-checked .el-switch__core {
+	box-shadow: 0 0 0 2px var(--color-accient);
+	border-color: #fff;
+	background-color: #fff;
+}
+
+.el-switch.is-checked .el-switch__core::after {
+	background-color: var(--color-accient);
+}
+
+.el-switch__input:focus + .el-switch__core {
+	box-shadow:
+		0 0 0 2px var(--color-icons),
+		0 0 0 4px var(--color-accient-light);
+}
+
+.el-switch.is-checked .el-switch__input:focus + .el-switch__core {
+	box-shadow:
+		0 0 0 2px var(--color-accient),
+		0 0 0 4px var(--color-accient-light);
+}

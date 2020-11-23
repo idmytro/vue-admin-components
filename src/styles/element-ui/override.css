@@ -1,0 +1,178 @@
+.el-table::before,
+.el-table__fixed::before,
+.el-table__fixed-right::before {
+  background-color: transparent !important;
+}
+
+.el-table th,
+.el-table tr {
+  background-color: #F3F6FA !important;
+}
+
+.el-table th>.cell {
+	display: flex;
+	align-items: center;
+}
+
+.el-table th>.cell span:first-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex-shrink: 1;
+}
+
+.el-table .cell {
+  word-break: break-word;
+}
+
+.el-table td .cell {
+  line-height: unset;
+}
+
+.el-table th,
+.el-table td {
+  border-bottom-width: 0 !important;
+}
+
+.el-table__row td {
+  background-color: #fff !important;
+}
+
+.el-table__row td:first-child {
+  border-radius: 8px 0 0 8px
+}
+
+.el-table__row td:last-child {
+  border-radius: 0 8px 8px 0
+}
+
+.el-table__body {
+  border-collapse:separate;
+  border-spacing:0 8px;
+}
+
+.el-collapse-item__header {
+  background-color: #F3F6FA !important;
+}
+
+.el-collapse-item__wrap {
+  background-color: #F3F6FA !important;
+}
+
+.el-drawer__body {
+  margin-left: 20px;
+}
+
+.el-form-item {
+  margin-bottom: 5px;
+}
+
+.el-form--label-top .el-form-item__label {
+  padding: 0;
+}
+
+/* .el-card { border-radius: 20px; } */
+
+.el-pagination .el-select .el-input {
+  width: 140px;
+}
+
+.el-input__inner,
+.el-textarea__inner,
+.el-checkbox__inner {
+	background-color: #F3F6FA;
+}
+
+.el-form-item__label {
+	font-weight: 500;
+}
+
+.el-form-item--content-leading-none .el-form-item__content {
+	line-height: 1;
+}
+
+.el-checkbox--label-attention .el-checkbox__label {
+	color: indianred;
+}
+
+.el-form-item.is-error.is-required.el-form-item--medium > div > .tox-tinymce {
+	box-shadow: 0 0 0 1px red !important;
+}
+
+.tabs-with-badges .el-badge__content {
+	top: 10px;
+	right: 0;
+}
+
+.el-menu-item.is-active,
+.el-tabs__item.is-active,
+.el-tabs__item:hover {
+	color: #214ECC;
+}
+
+.el-tabs__active-bar {
+	background-color: #214ECC;
+}
+
+.el-menu--horizontal>.el-menu-item.is-active,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+	color: #214ECC;
+}
+
+.el-menu--horizontal>.el-menu-item.is-active  {
+	border-bottom: 2px solid #214ECC;
+}
+
+.el-menu--horizontal>.el-menu-item {
+	color: inherit;
+}
+
+.el-notification__content p {
+	text-align: left;
+}
+
+
+.banned_user.el-table__row td {
+	background-color: #e4b7bb !important;
+}
+.blocked_user.el-table__row td {
+	background-color: #ebcccc !important;
+}
+
+.free_user.el-table__row td {
+	background-color: #dff0d8 !important;
+}
+
+.danger.el-table__row td {
+	background-color: #ebcccc !important;
+}
+
+.el-table--striped .el-table__body .blocked_user.el-table__row td {
+	background-color: #e4b7bb !important;
+}
+.el-table--striped .el-table__body .blocked_user.el-table__row--striped td {
+	background-color: #dea5aa !important;
+}
+
+.el-table--striped .el-table__body .banned_user.el-table__row td {
+	background-color: #e4b7bb !important;
+}
+.el-table--striped .el-table__body .banned_user.el-table__row--striped td {
+	background-color: #dea5aa !important;
+}
+
+.el-table--striped .el-table__body .free_user.el-table__row td {
+	background-color: #dff0d8 !important;
+}
+.el-table--striped .el-table__body .free_user.el-table__row--striped td {
+	background-color: #e3fcd8 !important;
+}
+
+.danger {
+	background-color: #e4b7bb !important;
+}
+
+a {
+	color: rgb(80, 80, 247);
+	text-decoration: none;
+}

@@ -1,0 +1,41 @@
+.el-checkbox__input {
+	padding: 2px; /* Отступ для тени при фокусе */
+}
+
+.el-checkbox__inner {
+	width: 20px;
+	height: 20px;
+	border-color: transparent !important;
+	background-color: var(--color-background) !important;
+	transition-duration: var(--transition-duration);
+	transition-property: background-color;
+	border-radius: 4px;
+}
+
+.el-table__row.hover-row .el-checkbox__inner,
+.el-table__row--striped .el-checkbox__inner {
+	background-color: #fff !important;
+}
+
+.el-checkbox__inner::after {
+	border-color: var(--color-accient);
+	border-width: 2px;
+	height: 10px;
+	left: 6px;
+	top: 2px;
+	width: 4px;
+}
+
+.el-checkbox__input.is-indeterminate .el-checkbox__inner::before {
+	background-color: var(--color-accient);
+
+	height: 2px;
+	transform: none;
+	left: 4px;
+	right: 4px;
+	top: 8px;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+	box-shadow: var(--box-shadow-focus);
+}

@@ -1,0 +1,55 @@
+.el-pagination {
+	padding: 0;
+}
+
+.el-pagination button,
+.el-pagination .el-pager li,
+.el-pagination .el-input__inner {
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--rounded-form-item) !important;
+}
+
+.el-pagination.is-background .el-input__inner {
+	border-width: 0;
+}
+
+.el-pagination button,
+.el-pagination .el-pager li {
+	min-width: 40px !important;
+}
+
+.el-pagination .el-pager li,
+.el-pagination.is-background button {
+	background-color: var(--color-background) !important;
+	transition-duration: var(--transition-duration);
+	transition-property: var(--transition-property-form-item);
+}
+
+.el-pagination .el-pager li.active {
+	background-color: #fff !important;
+	color: var(--color-accient-dark) !important;
+	border: 2px solid var(--color-accient);
+}
+
+.el-pagination.is-background .el-input__inner:hover,
+.el-pagination.is-background .el-pager li:hover:not(.active),
+.el-pagination.is-background button:not([disabled]):hover {
+	background-color: var(--color-background-dark) !important;
+}
+
+.el-pagination.is-background .el-pager li:hover:not(.active),
+.el-pagination.is-background button:not([disabled]):hover {
+	color: inherit !important;
+}
+
+.el-pagination .el-select .el-input {
+	margin: 0;
+  width: 140px;
+}
+
+.el-pagination.is-background .el-select__caret {
+	color: var(--color-primary-text) !important;
+}

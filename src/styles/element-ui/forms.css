@@ -1,0 +1,91 @@
+.el-input__inner {
+	border-radius: var(--rounded-form-item);
+	transition-duration: var(--transition-duration);
+	transition-property: var(--transition-property-form-item);
+	color: var(--color-primary-text);
+	font-family: var(--font-roboto);
+	box-shadow: none;
+}
+
+.el-input__inner:focus,
+.el-input__inner.is-active,
+.el-input.is-focus .el-input__inner {
+	outline: 0;
+	box-shadow: 0 0 0 2px var(--color-accient-light);
+}
+
+.el-input .el-input__inner::placeholder,
+.el-select .el-input__inner::placeholder,
+.el-date-editor .el-range-input::placeholder {
+	color: var(--color-plain-text);
+	letter-spacing: -.01em;
+}
+
+.el-input .icon-search {
+	display: inline-block;
+	background-image: url("/static/assets/icon-search.svg");
+}
+
+
+/* theme: white | background */
+
+.form--theme-white,
+.el-form--theme-white,
+.el-input--theme-white,
+.el-select--theme-white {
+	--main-color: #fff;
+}
+
+.el-input--theme-background {
+	--main-color: var(--color-background);
+}
+
+[class*=--theme] .el-input__inner {
+	background-color: var(--main-color);
+	border-color: var(--main-color);
+}
+
+[class*=--theme]:hover .el-input__inner,
+[class*=--theme] .el-input__inner:focus,
+[class*=--theme] .el-input.is-focus .el-input__inner {
+	border-color: var(--main-color);
+}
+
+.el-select__caret,
+.el-date-editor .el-range__icon {
+	color: var(--color-icons) !important;
+}
+
+.el-input-number__decrease {
+  border-radius: 8px 0 0 8px;
+}
+
+.el-input-number__increase {
+  border-radius: 0 8px 8px 0;
+}
+
+.el-input__inner,
+.el-textarea__inner {
+	border-width: 0;
+}
+
+.el-textarea__inner:focus {
+	box-shadow: 0 0 0 2px var(--color-accient-light);
+}
+
+.el-select .el-tag {
+	background-color: var(--color-borders);
+	border-color: transparent;
+	color: var(--color-primary-text);
+}
+
+.el-select .el-tag__close {
+	background-color: transparent !important;
+	color: var(--color-plain-text) !important;
+	font-size: 16px;
+}
+
+.el-switch.is-checked .el-switch__core {
+	border-color: var(--color-success);
+  background-color: var(--color-success);
+}
