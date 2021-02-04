@@ -118,5 +118,3 @@
   });
 })(window);
 </script>
-
-<style src="./layout-list.css"></style>
