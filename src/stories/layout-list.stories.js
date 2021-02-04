@@ -19,6 +19,17 @@ const Template = () => ({
 });
 
 export const WithAside = Template.bind({});
+
+export const WithoutAside = () => ({
+  components: { LayoutList, LayoutHeader },
+  template: `
+    <div>
+      <layout-header></layout-header>
+      <layout-list :hasAside="false"></layout-list>
+    <div>
+  `,
+});
+
 export const FoldableAside = () => ({
   components: { LayoutList, LayoutHeader },
   template: `

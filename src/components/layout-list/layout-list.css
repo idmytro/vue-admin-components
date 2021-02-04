@@ -32,7 +32,8 @@
 }
 
 .layout-list--without-aside .layout-list__main {
-  width: calc(100% - var(--space-layout));
+  width: 100%;
+  /* width: calc(100% - var(--space-layout)); */
 }
 
 .layout-list__main-body {
@@ -121,7 +122,7 @@
   font-weight: bold;
   position: relative;
   display: inline-block;
-  padding-right: 36px;
+  padding-right: 36px !important;
   margin-right: 10px;
 }
 
