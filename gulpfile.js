@@ -29,8 +29,10 @@ function addHeader (file) {
   ]);
 }
 
-gulp.task('vue', () => {
-  return gulp.src(['./src/components/**/*.vue'])
+gulp.task('legacy-vue', () => {
+  return gulp.src([
+    './src/components/**/*.legacy.vue',
+  ])
     .pipe(tap(addHtmlHeader))
     .pipe(gulp.dest('./dist/components'));
 });
@@ -53,4 +55,4 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./dist/mixins'));
 });
 
-gulp.task('default', gulp.parallel('vue', 'legacy-mixins', 'css', 'js'));
+gulp.task('default', gulp.parallel('legacy-vue', 'legacy-mixins', 'css'));
