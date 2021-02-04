@@ -16,7 +16,7 @@ function addHtmlHeader (file) {
   ]);
 }
 
-function addCssHeader (file) {
+function addHeader (file) {
   const path = [
     repository.url.replace('.git', ''),
     gitlabBlob,
@@ -35,16 +35,22 @@ gulp.task('vue', () => {
     .pipe(gulp.dest('./dist/components'));
 });
 
+gulp.task('legacy-mixins', () => {
+  return gulp.src(['./src/mixins/**/*.vue'])
+    .pipe(tap(addHtmlHeader))
+    .pipe(gulp.dest('./dist/mixins'));
+});
+
 gulp.task('css', () => {
   return gulp.src(['./src/**/*.css'])
-    .pipe(tap(addCssHeader))
+    .pipe(tap(addHeader))
     .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('js', () => {
   return gulp.src(['./src/mixins/*.js'])
-    .pipe(tap(addCssHeader))
+    .pipe(tap(addHeader))
     .pipe(gulp.dest('./dist/mixins'));
 });
 
-gulp.task('default', gulp.parallel('vue', 'css', 'js'));
+gulp.task('default', gulp.parallel('vue', 'legacy-mixins', 'css', 'js'));
