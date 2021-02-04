@@ -1,15 +1,9 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "description": "Vue Admin UI Components",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "idmytro/vue-admin-ui-components"
-  },
-  "keywords": [],
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
-  "license": "FSFUL",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -41,8 +35,5 @@
     "eslint-plugin-vue": "^7.0.0-beta.3",
     "react-is": "^16.13.1",
     "vue-template-compiler": "^2.6.11"
-  },
-  "peerDependencies": {
-    "@vue-admin-ui/tailwindcss-config": "^1.0.2"
   }
 }
