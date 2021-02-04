@@ -37,7 +37,7 @@
 .layout-list__main-body {
   border-top-left-radius: var(--rounded-layout);
   background: #fff;
-  padding: 20px 0 0 20px;
+  padding-top: var(--space-layout);
   overflow: hidden;
   display: flex;
   flex-direction: column;
