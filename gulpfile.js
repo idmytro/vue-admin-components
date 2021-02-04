@@ -24,7 +24,7 @@ function addCssHeader (file) {
     file.path.replace(__dirname, ''),
   ].join('');
   file.contents = Buffer.concat([
-    Buffer.from(`/* ${path} */\n`),
+    Buffer.from(`/* ${path} */\n\n`),
     file.contents,
   ]);
 }
