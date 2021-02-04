@@ -54,7 +54,10 @@
         <div class="layout-list__column-body layout-list__main-body">
           <slot name="main-body"></slot>
         </div>
-        <div class="layout-list__column-footer layout-list__main-footer">
+        <div
+          v-if="hasMainFooter"
+          class="layout-list__column-footer layout-list__main-footer"
+        >
           <slot name="main-footer"></slot>
         </div>
       </div>
@@ -86,6 +89,9 @@ export default {
   computed: {
     hasAsideFooter () {
       return !!this.$slots['aside-footer'];
+    },
+    hasMainFooter () {
+      return !!this.$slots['main-footer'];
     },
     mainHeaderVisible () {
       return !!this.$slots.filters || !this.asideVisible;

@@ -1,3 +1,5 @@
+<!-- https://git.edadev.ru/cisar/vue-admin-ui-components/-/blob/v2.0.6/src/components/layout-list/layout-list.legacy.vue -->
+
 <template
   id="LayoutList"
 >
@@ -56,7 +58,10 @@
         <div class="layout-list__column-body layout-list__main-body">
           <slot name="main-body"></slot>
         </div>
-        <div class="layout-list__column-footer layout-list__main-footer">
+        <div
+          v-if="hasMainFooter"
+          class="layout-list__column-footer layout-list__main-footer"
+        >
           <slot name="main-footer"></slot>
         </div>
       </div>
@@ -90,6 +95,9 @@
     computed: {
       hasAsideFooter () {
         return !!this.$slots['aside-footer'];
+      },
+      hasMainFooter () {
+        return !!this.$slots['main-footer'];
       },
       mainHeaderVisible () {
         return !!this.$slots.filters || !this.asideVisible;
