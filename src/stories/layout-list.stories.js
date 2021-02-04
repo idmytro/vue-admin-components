@@ -9,9 +9,18 @@ export default {
 };
 
 const content = `
-<template #main-body>
-  <div style="background-color: pink">CONTENT</div>
-</template>
+  <template #main-body>
+    <div style="background-color: pink; height: 1000px">BODY</div>
+  </template>
+  <template #main-footer>
+    <div style="background-color: pink; ">FOOTER</div>
+  </template>
+`;
+
+const contentWithoutMainFooter = `
+  <template #main-body>
+    <div style="background-color: pink; height: 1000px">BODY</div>
+  </template>
 `;
 
 const Template = () => ({
@@ -31,7 +40,7 @@ export const WithoutAside = () => ({
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list :hasAside="false">${content}</layout-list>
+      <layout-list :has-aside="false">${content}</layout-list>
     <div>
   `,
 });
@@ -42,6 +51,16 @@ export const FoldableAside = () => ({
     <div>
       <layout-header></layout-header>
       <layout-list foldable-aside>${content}</layout-list>
+    <div>
+  `,
+});
+
+export const WithoutAsideAndMainFooter = () => ({
+  components: { LayoutList, LayoutHeader },
+  template: `
+    <div>
+      <layout-header></layout-header>
+      <layout-list :has-aside="false">${contentWithoutMainFooter}</layout-list>
     <div>
   `,
 });

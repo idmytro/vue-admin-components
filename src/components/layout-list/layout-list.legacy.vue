@@ -91,6 +91,9 @@
       hasAsideFooter () {
         return !!this.$slots['aside-footer'];
       },
+      hasMainFooter () {
+        return !!this.$slots['main-footer'];
+      },
       mainHeaderVisible () {
         return !!this.$slots.filters || !this.asideVisible;
       },
