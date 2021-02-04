@@ -66,7 +66,8 @@
 
 <script>
 ((global) => {
-  const component = {
+  global.components.LayoutList = global.Vue.component('LayoutList', {
+    template: '#LayoutList',
     props: {
       hasAside: {
         type: Boolean,
@@ -114,10 +115,6 @@
         });
       },
     },
-  };
-  global.components.LayoutList = global.Vue.component('LayoutList', {
-    ...component,
-    template: '#LayoutList',
   });
 })(window);
 </script>

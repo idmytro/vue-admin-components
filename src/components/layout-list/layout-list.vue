@@ -96,7 +96,6 @@ export default {
       this.asideVisible = !localStorage.getItem(this.foldedAsideKey) || !this.foldableAside;
     }
   },
-
   methods: {
     toggleAsideVisible (value) {
       if (this.foldedAsideKey) {
