@@ -8,12 +8,18 @@ export default {
   component: LayoutList,
 };
 
+const content = `
+<template #main-body>
+  <div style="background-color: pink">CONTENT</div>
+</template>
+`;
+
 const Template = () => ({
   components: { LayoutList, LayoutHeader },
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list></layout-list>
+      <layout-list>${content}</layout-list>
     <div>
   `,
 });
@@ -25,7 +31,7 @@ export const WithoutAside = () => ({
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list :hasAside="false"></layout-list>
+      <layout-list :hasAside="false">${content}</layout-list>
     <div>
   `,
 });
@@ -35,7 +41,7 @@ export const FoldableAside = () => ({
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list foldable-aside></layout-list>
+      <layout-list foldable-aside>${content}</layout-list>
     <div>
   `,
 });
