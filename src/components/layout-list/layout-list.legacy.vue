@@ -66,6 +66,8 @@
         </div>
       </div>
     </main>
+
+    <slot name="drawer"></slot>
   </div>
 </template>
 
