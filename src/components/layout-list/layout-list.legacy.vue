@@ -1,5 +1,3 @@
-<!-- https://git.edadev.ru/cisar/vue-admin-ui-components/-/blob/v2.0.6/src/components/layout-list/layout-list.legacy.vue -->
-
 <template
   id="LayoutList"
 >
