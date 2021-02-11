@@ -1,12 +1,12 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://git.edadev.ru/cisar/vue-admin-ui-components.git"
+    "url": "https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components.git"
   },  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
