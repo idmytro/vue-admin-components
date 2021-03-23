@@ -8,18 +8,27 @@ export default {
   component: LayoutList,
 };
 
+const aside = `
+  <template #aside-body>
+    <div style="border: 1px dashed pink; height: 500px">BODY</div>
+  </template>
+  <template #aside-footer>
+    <div style="border: 1px dashed pink; ">FOOTER</div>
+  </template>
+`;
+
 const content = `
   <template #main-body>
-    <div style="background-color: pink; height: 1000px">BODY</div>
+    <div style="border: 1px dashed pink; height: 1000px">BODY</div>
   </template>
   <template #main-footer>
-    <div style="background-color: pink; ">FOOTER</div>
+    <div style="border: 1px dashed pink; ">FOOTER</div>
   </template>
 `;
 
 const contentWithoutMainFooter = `
   <template #main-body>
-    <div style="background-color: pink; height: 1000px">BODY</div>
+    <div style="border: 1px dashed pink; height: 1000px">BODY</div>
   </template>
 `;
 
@@ -28,7 +37,10 @@ const Template = () => ({
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list>${content}</layout-list>
+      <layout-list>
+        ${content}
+        ${aside}
+      </layout-list>
     <div>
   `,
 });
