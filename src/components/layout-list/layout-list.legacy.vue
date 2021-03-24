@@ -52,7 +52,7 @@
         </button>
         <slot name="filters"></slot>
       </div>
-      <div class="layout-list__main-column flex flex-col overflow-hidden">
+      <div class="layout-list__main-column">
         <div class="layout-list__column-body layout-list__main-body">
           <slot name="main-body"></slot>
         </div>

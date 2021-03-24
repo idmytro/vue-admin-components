@@ -13,7 +13,7 @@ const aside = `
     <div style="border: 1px dashed pink; height: 500px">BODY</div>
   </template>
   <template #aside-footer>
-    <div style="border: 1px dashed pink; ">FOOTER</div>
+    <div style="border: 1px dashed pink; height: 100% ">FOOTER</div>
   </template>
 `;
 
@@ -22,7 +22,7 @@ const content = `
     <div style="border: 1px dashed pink; height: 1000px">BODY</div>
   </template>
   <template #main-footer>
-    <div style="border: 1px dashed pink; ">FOOTER</div>
+    <div style="border: 1px dashed pink; height: 100%">FOOTER</div>
   </template>
 `;
 
