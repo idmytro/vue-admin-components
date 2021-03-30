@@ -30,21 +30,25 @@
   --color-warning: #e8ca2c;
   --color-warning-light: #faf2cd;
   --color-icons: #AAADB3;
+
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-roboto: Roboto, sans-serif;
   --font-yandex: "YS Text", sans-serif;
-  --text-body: 13px;
-  --text-menu: 14px;
-  --text-h1: 28px;
-  --text-h2: 24px;
-  --text-h3: 20px;
-  --text-h4: 16px;
-  --text-h5: 14px;
-  --text-huge: 56px;
+
   --rounded-form-item: 8px;
   --rounded-layout: 12px;
+
+  --size-text-body: 13px;
+  --size-text-menu: 14px;
+  --size-text-h1: 28px;
+  --size-text-h2: 24px;
+  --size-text-h3: 20px;
+  --size-text-h4: 16px;
+  --size-text-h5: 14px;
+  --size-text-huge: 56px;
+
+  --tracking-wide: 0.025em; /* https://tailwindcss.com/docs/letter-spacing */
+
   --transition-duration: 250ms;
-  --transition-property-none: none;
-  --transition-property-all: all;
-  --transition-property-box-shadow: box-shadow;
-  --transition-property-form-item: box-shadow,color,border-color,background-color,opacity
+  --transition-property-form-item: box-shadow, color, border-color, background-color, opacity;
 }
