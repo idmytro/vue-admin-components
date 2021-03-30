@@ -3,7 +3,7 @@
     <side-menu-item
       type="logo"
       to="/"
-      label="Catalyst"
+      :label="label"
     ></side-menu-item>
 
     <div class="side-menu__list">
@@ -29,6 +29,12 @@
 ((global) => {
   global.components.SideMenu = Vue.component('SideMenu', {
     template: '#side-menu',
+    props: {
+      label: {
+        type: String,
+        default: undefined,
+      },
+    },
   });
 })(window);
 </script>

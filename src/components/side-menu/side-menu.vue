@@ -3,7 +3,7 @@
     <side-menu-item
       type="logo"
       to="/"
-      label="Catalyst"
+      :label="label"
     ></side-menu-item>
 
     <div class="side-menu__list">
@@ -31,6 +31,12 @@ import SideMenuIcons from './side-menu-icons.vue';
 
 export default {
   components: { SideMenuItem, SideMenuIcons },
+  props: {
+    label: {
+      type: String,
+      default: undefined,
+    },
+  },
 };
 
 export { SideMenuItem };
