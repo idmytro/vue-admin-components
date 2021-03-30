@@ -22,7 +22,6 @@
   width: var(--width-aside);
   flex-shrink: 0;
   margin-top: calc(var(--space-layout) - var(--space-aside-top));
-  /* margin-bottom: var(--space-layout); */
 }
 
 .layout-list__main {
