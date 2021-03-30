@@ -1,11 +1,12 @@
 .layout-list {
   --height-header: 60px;
   --height-filters: 28px;
-  --space-filters: 30px; /* var(--height-filters) + aside-top-padding */
+  --space-filters: 30px; /* var(--height-filters) + var( --space-aside-top) */
   --space-layout: 20px;
   --height-button: 40px;
   --width-aside: 280px;
   --width-aside-inner: 244px;
+  --space-aside-top: 2px;
 
   overflow: hidden;
   display: flex;
@@ -20,8 +21,8 @@
 .layout-list__aside {
   width: var(--width-aside);
   flex-shrink: 0;
-  margin-top: var(--space-layout);
-  margin-bottom: var(--space-layout);
+  margin-top: calc(var(--space-layout) - var(--space-aside-top));
+  /* margin-bottom: var(--space-layout); */
 }
 
 .layout-list__main {
@@ -57,8 +58,7 @@
 }
 
 .layout-list__aside-column {
-  padding-top: 2px; /* aside-top-padding */
-  margin-top: -2px;
+  padding-top: var(--space-aside-top);
   overflow-y: auto;
 }
 
@@ -80,6 +80,11 @@
   flex-shrink: 0;
   margin-top: var(--space-layout);
   min-height: var(--height-button);
+}
+
+.layout-list__aside-footer {
+  border-bottom: var(--space-layout) solid transparent;
+  box-sizing: content-box;
 }
 
 .layout-list--without-aside-footer .layout-list__aside-footer {
