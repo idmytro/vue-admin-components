@@ -7,12 +7,14 @@
   "repository": {
     "type": "git",
     "url": "https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components.git"
-  },  "scripts": {
+  },
+  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "windicss": "./node_modules/.bin/windicss 'src/**/*.(js|vue)' -o src/windi.css -f windi.config.js"
   },
   "dependencies": {
     "element-ui": "^2.14.1",
@@ -40,6 +42,9 @@
     "gulp": "^4.0.2",
     "gulp-tap": "^2.0.0",
     "react-is": "^16.13.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vue-windicss-preprocess": "^2.2.0",
+    "windicss": "^2.5.8",
+    "windicss-webpack-plugin": "^0.3.2"
   }
 }

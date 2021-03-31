@@ -1,5 +1,9 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="m-2px"
+  >
+    APP
   </div>
 </template>
 

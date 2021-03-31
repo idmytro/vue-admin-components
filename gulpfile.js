@@ -1,7 +1,17 @@
 const gulp = require('gulp');
+const { watch } = require('gulp');
 const tap = require('gulp-tap');
-const { repository, version } = require('./package.json');
+const { exec } = require('child_process');
+
+const { repository, version, scripts } = require('./package.json');
 const gitlabBlob = '/-/blob/';
+
+const paths = {
+  content: [
+    'src/**/*.vue',
+    'src/**/*.js',
+  ],
+};
 
 function addHtmlHeader (file) {
   const path = [
@@ -54,5 +64,11 @@ gulp.task('js', () => {
     .pipe(tap(addHeader))
     .pipe(gulp.dest('./dist/mixins'));
 });
+
+const runWindiCSS = () => exec(scripts.windicss);
+
+const watchFiles = () => watch(paths.content, runWindiCSS);
+
+exports.watch = watchFiles;
 
 gulp.task('default', gulp.parallel('legacy-vue', 'legacy-mixins', 'css'));
