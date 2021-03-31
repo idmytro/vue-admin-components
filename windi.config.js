@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     require('windicss/plugin/line-clamp'),
     plugin(function ({ addDynamic }) {
-      addDynamic('font-size', ({ Utility, Style, Property }) => {
+      addDynamic('font', ({ Utility, Style, Property }) => {
         const value = Utility.body.replace('size-', '');
         const parsed = parseInt(value);
         if (!value) return;
@@ -25,6 +25,15 @@ module.exports = {
         if (Utility.raw.endsWith('px') && parsed) {
           return Style(Utility.class, [
             Property('font-size', `${parsed}px`),
+          ]);
+        }
+      });
+    }),
+    plugin(function ({ addDynamic }) {
+      addDynamic('shadow', ({ Utility, Style, Property }) => {
+        if (Utility.raw.startsWith('shadow-$')) {
+          return Style(Utility.class, [
+            Property('box-shadow', `var(--${Utility.body.replace('$', '')})`),
           ]);
         }
       });

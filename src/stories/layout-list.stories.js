@@ -5,32 +5,35 @@ import { LayoutList, LayoutHeader } from '../..';
 
 const components = { LayoutList, LayoutHeader };
 
+const borderStyle = 'border: 1px dashed pink';
+
 const aside = `
   <template #aside-body>
-    <div style="border: 1px dashed pink; height: 500px">BODY</div>
+    <div class="pl-$space-layout w-$width-aside-inner" style="${borderStyle}; height: 500px">
+      <input class="w-full h-40px focus:shadow-$box-shadow-focus outline-none border-none bg-white rounded-$rounded-form-item">
+    </div>
   </template>
   <template #aside-footer>
-    <div style="border: 1px dashed pink; height: 100% ">FOOTER</div>
+    <div class="pl-$space-layout w-$width-aside-inner" style="${borderStyle}; height: 100%">FOOTER</div>
   </template>
 `;
 
 const content = `
   <template #main-body>
-    <div class="h-1000px" style="border: 1px dashed pink; height: 1000px">BODY</div>
+    <div style="${borderStyle}; height: 1000px">BODY</div>
   </template>
   <template #main-footer>
-    <div style="border: 1px dashed pink; height: 100%">FOOTER</div>
+    <div style="${borderStyle}; height: 100%">FOOTER</div>
   </template>
 `;
 
 const contentWithoutMainFooter = `
   <template #main-body>
-    <div style="border: 1px dashed pink; height: 1000px">BODY</div>
+    <div style="${borderStyle}; height: 1000px">BODY</div>
   </template>
 `;
 
 const Template = () => ({
-  // components: { LayoutList, LayoutHeader },
   components,
   template: `
     <div>
@@ -43,7 +46,20 @@ const Template = () => ({
   `,
 });
 
-export const WithAside = Template.bind({});
+// export const WithAside = Template.bind({});
+
+export const WithAside = () => ({
+  components,
+  template: `
+    <div>
+      <layout-header></layout-header>
+      <layout-list>
+        ${content}
+        ${aside}
+      </layout-list>
+    </div>
+  `,
+});
 
 export const WithoutAside = () => ({
   components,
