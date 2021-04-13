@@ -6,25 +6,69 @@ export default {
   component: BaseLayout,
 };
 
-const Template = () => ({
-  components: { BaseLayout },
+const components = { BaseLayout, SideMenu };
+
+const MENU = `
+<template slot="menu">
+  <side-menu></side-menu>
+</template>`;
+
+const HEADER = `
+<header class="base-layout__header">
+  <div style="height: 60px; background-color: #fff;"></div>
+</header>`;
+
+const CONTENT = '<div style="padding: 20px">Content</div>';
+
+export const Simple = () => ({
+  components,
   template: `
     <base-layout>
-      <div style="padding: 20px">MAIN</div>
+      ${CONTENT}
     </base-layout>
   `,
 });
 
-export const WithoutMenu = Template.bind({});
-
-export const WithMenu = () => ({
-  components: { BaseLayout, SideMenu },
+export const WithHeader = () => ({
+  components,
   template: `
     <base-layout>
-      <template slot="menu">
-        <side-menu></side-menu>
-      </template>
-      <div style="padding: 20px">MAIN</div>
+      ${HEADER}
+      ${CONTENT}
+    </base-layout>
+  `,
+});
+
+export const WithMenu = () => ({
+  components,
+  template: `
+    <base-layout>
+      ${MENU}
+      ${CONTENT}
+    </base-layout>
+  `,
+});
+
+export const WithMenuAndHeader = () => ({
+  components,
+  template: `
+    <base-layout>
+      ${MENU}
+      ${HEADER}
+      ${CONTENT}
+    </base-layout>
+  `,
+});
+
+export const WithMenuHeaderAndBody = () => ({
+  components,
+  template: `
+    <base-layout>
+      ${MENU}
+      ${HEADER}
+      <div class="base-layout__body">
+        <div class="form-section" style="height: 1000px;">FORM SECTION</div>
+      </div>
     </base-layout>
   `,
 });
