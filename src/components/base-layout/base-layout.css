@@ -1,5 +1,6 @@
 .base-layout {
   --width-sidemenu: 72px;
+  --space-layout: 20px;
 
   display: flex;
   min-height: 100vh;
@@ -40,9 +41,6 @@
 
 .base-layout__body {
   padding-left: var(--space-layout);
-}
-
-.base-layout__header + .base-layout__body {
   padding-top: var(--space-layout);
 }
 
