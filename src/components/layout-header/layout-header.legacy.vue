@@ -1,4 +1,6 @@
-<template>
+<template
+  id="LayoutHeader"
+>
   <div
     class="layout-header"
     :class="$slots.default && 'layout-header--with-menu'"
@@ -23,18 +25,19 @@
 </template>
 
 <script>
-export default {
-  props: {
-    hasBackButton: {
-      type: Boolean,
-      default: false,
+((global) => {
+  global.components.LayoutHeader = global.Vue.component('LayoutHeader', {
+    template: '#LayoutHeader',
+    props: {
+      hasBackButton: {
+        type: Boolean,
+        default: false,
+      },
+      title: {
+        type: String,
+        default: '',
+      },
     },
-    title: {
-      type: String,
-      default: '',
-    },
-  },
-};
+  });
+})(window);
 </script>
-
-<style src="./layout-header.css"></style>
