@@ -20,3 +20,32 @@
 .base-layout__menu + .base-layout__main {
   margin-left: var(--width-sidemenu);
 }
+
+.base-layout__header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.base-layout__header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: var(--space-layout);
+  background-image: linear-gradient(var(--color-background), rgba(255,255,255,0));
+}
+
+.base-layout__body {
+  padding-left: var(--space-layout);
+}
+
+.base-layout__header + .base-layout__body {
+  padding-top: var(--space-layout);
+}
+
+.base-layout .form-section:first-of-type {
+  border-top-left-radius: var(--rounded-layout);
+}
