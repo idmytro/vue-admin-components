@@ -5,7 +5,7 @@
 .accent-button,
 .regular-button,
 .secondary-button {
-	font-size: var(--text-menu);
+	font-size: var(--size-text-menu);
 	letter-spacing: var(--tracking-wide);
 	font-weight: bold;
 	border-radius: 8px;
