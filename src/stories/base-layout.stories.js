@@ -9,7 +9,7 @@ export default {
 const components = { BaseLayout, SideMenu };
 
 const MENU = `
-<template slot="menu">
+<template #menu>
   <side-menu></side-menu>
 </template>`;
 
