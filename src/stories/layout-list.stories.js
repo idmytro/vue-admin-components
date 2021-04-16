@@ -9,12 +9,12 @@ const borderStyle = 'border: 1px dashed pink';
 
 const aside = `
   <template #aside-body>
-    <div class="pl-$space-layout w-$width-aside-inner" style="${borderStyle}; height: 500px">
+    <div style="${borderStyle}; height: 500px">
       <input class="w-full h-40px focus:shadow-$box-shadow-focus outline-none border-none bg-white rounded-$rounded-form-item">
     </div>
   </template>
   <template #aside-footer>
-    <div class="pl-$space-layout w-$width-aside-inner" style="${borderStyle}; height: 100%">FOOTER</div>
+    <div style="${borderStyle}; height: 100%">FOOTER</div>
   </template>
 `;
 
@@ -32,21 +32,6 @@ const contentWithoutMainFooter = `
     <div style="${borderStyle}; height: 1000px">BODY</div>
   </template>
 `;
-
-const Template = () => ({
-  components,
-  template: `
-    <div>
-      <layout-header></layout-header>
-      <layout-list>
-        ${content}
-        ${aside}
-      </layout-list>
-    </div>
-  `,
-});
-
-// export const WithAside = Template.bind({});
 
 export const WithAside = () => ({
   components,
@@ -76,7 +61,10 @@ export const FoldableAside = () => ({
   template: `
     <div>
       <layout-header></layout-header>
-      <layout-list foldable-aside>${content}</layout-list>
+      <layout-list foldable-aside>
+        ${content}
+        ${aside}
+      </layout-list>
     <div>
   `,
 });
