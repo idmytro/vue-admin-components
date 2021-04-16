@@ -26,11 +26,11 @@
             Фильтры
           </button>
         </div>
-        <div class="layout-list__column-body">
+        <div class="layout-list__aside-body">
           <slot name="aside-body"></slot>
         </div>
 
-        <div class="layout-list__column-footer layout-list__aside-footer">
+        <div class="layout-list__aside-footer">
           <slot name="aside-footer"></slot>
         </div>
       </div>
@@ -53,12 +53,12 @@
         <slot name="filters"></slot>
       </div>
       <div class="layout-list__main-column">
-        <div class="layout-list__column-body layout-list__main-body">
+        <div class="layout-list__main-body">
           <slot name="main-body"></slot>
         </div>
         <div
           v-if="hasMainFooter"
-          class="layout-list__column-footer layout-list__main-footer"
+          class="layout-list__main-footer"
         >
           <slot name="main-footer"></slot>
         </div>
