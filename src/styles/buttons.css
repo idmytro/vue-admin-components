@@ -78,7 +78,7 @@
 
 .accent-button {
 	background-color: var(--color-accent);
-	color: var(--color-white);
+	color: #fff;
 	border-width: 0;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .regular-button {
-	background-color: var(--color-white);
+	background-color: #fff;
 	color: var(--color-accent-dark);
 	border-color: var(--color-accent);
 	border-width: 2px;
@@ -111,7 +111,7 @@
 }
 
 .secondary-button {
-	background-color: var(--color-white);
+	background-color: #fff;
 	color: var(--color-primary-text);
 	font-weight: normal;
 	border-width: 2px;
