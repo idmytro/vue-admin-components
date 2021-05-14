@@ -10,6 +10,12 @@
       <slot></slot>
     </div>
 
+    <div class="side-menu__profile-cell">
+      <div class="side-menu__profile">
+        <slot name="profile"></slot>
+      </div>
+    </div>
+
     <form
       action="/api/v1/logout"
       method="post"

@@ -1,18 +1,38 @@
+/* https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v3.0.0/src/components/side-menu/side-menu.css */
+
 .side-menu {
   flex-shrink: 0;
   width: 72px;
   background-color: #2E384D;
   display: grid;
-  grid-template-rows: 54px 1fr 68px;
+  grid-template-rows: 54px 1fr 72px 68px;
   grid-gap: 6px;
 }
 
 .side-menu__list {
-  height: calc(100vh - 54px - 68px - 12px);
+  height: calc(100vh - 54px - 68px - 72px - 12px);
   overflow-y: auto;
 }
 
 .side-menu__list .side-menu-item {
   padding-top: 6px;
   padding-bottom: 6px;
+}
+
+.side-menu__profile-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu__profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.side-menu__profile > img {
+  height: 100%;
+  width: 100%;
 }
