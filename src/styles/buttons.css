@@ -130,7 +130,7 @@
 
 .regular-button[disabled],
 .secondary-button[disabled],
-.background-button[disabled],{
+.background-button[disabled] {
   opacity: .5;
 }
 

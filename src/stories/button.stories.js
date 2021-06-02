@@ -28,6 +28,7 @@ export const BackgroundButton = () => ({
   template: `
     <div style="padding: 20px; background-color: #fff;">
       <button type="button" class="background-button">Кнопка</button>
+      <button type="button" disabled class="background-button">Disabled</button>
     </div>
   `,
 });
