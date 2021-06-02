@@ -32,3 +32,13 @@ export const BackgroundButton = () => ({
     </div>
   `,
 });
+
+export const IconButton = () => ({
+  template: `
+    <div style="padding: 20px; background-color: #fff;">
+      <button type="button" class="background-button icon-button">
+        <i class="el-icon-close"></i>
+      </button>
+    </div>
+  `,
+});
