@@ -4,7 +4,8 @@
 
 .accent-button,
 .regular-button,
-.secondary-button {
+.secondary-button,
+.background-button {
 	font-size: var(--size-text-menu);
 	letter-spacing: var(--tracking-wide);
 	font-weight: bold;
@@ -18,7 +19,8 @@
 
 .accent-button,
 .regular-button,
-.secondary-button {
+.secondary-button,
+.background-button {
 	transition-duration: var(--transition-duration);
 	transition-property: var(--transition-property-form-item);
 }
@@ -40,6 +42,7 @@
 .regular-button:focus,
 .accent-button:focus,
 .secondary-button:focus,
+.background-button:focus,
 .label-button:focus {
 	outline: 0;
 	box-shadow: var(--box-shadow-focus);
@@ -58,7 +61,8 @@
 
 .accent-button[disabled],
 .regular-button[disabled],
-.secondary-button[disabled] {
+.secondary-button[disabled],
+.background-button[disabled] {
 	cursor: not-allowed;
 }
 
@@ -125,7 +129,8 @@
 }
 
 .regular-button[disabled],
-.secondary-button[disabled] {
+.secondary-button[disabled],
+.background-button[disabled],{
   opacity: .5;
 }
 
@@ -133,6 +138,7 @@
   color: var(--color-plain-text);
 }
 
+/* TODO: migrate to .background-button */
 .white-button {
 	border-width: 0;
 	cursor: pointer;
@@ -142,3 +148,19 @@
 .secondary-button [class^="el-icon-"] {
 	color: inherit;
 }
+
+.background-button {
+  background-color:  var(--color-background);
+  color: var(--color-primary-text);
+  border-width: 0;
+  font-weight: normal;
+}
+
+.background-button:not([disabled]):hover, .background-button:active {
+  background-color: var(--color-background-dark);
+}
+
+[class$=--theme-white] .background-button{
+	--main-color: #fff;
+}
+
