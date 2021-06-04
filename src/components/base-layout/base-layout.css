@@ -1,6 +1,7 @@
 .base-layout {
   --width-sidemenu: 72px;
   --space-layout: 20px;
+  --height-header: 60px;
 
   display: flex;
   min-height: 100vh;
