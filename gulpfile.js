@@ -59,10 +59,16 @@ gulp.task('css', () => {
     .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('js', () => {
+gulp.task('js-mixins', () => {
   return gulp.src(['./src/mixins/*.js'])
     .pipe(tap(addHeader))
     .pipe(gulp.dest('./dist/mixins'));
+});
+
+gulp.task('js', () => {
+  return gulp.src(['./src/components/**/*.js'])
+    .pipe(tap(addHeader))
+    .pipe(gulp.dest('./dist/components'));
 });
 
 const runWindiCSS = () => exec(scripts.windicss);

@@ -1,9 +1,12 @@
 export default {
+  name: 'BaseLayout',
   template: `
-    <div class="base-layout">
+    <div
+      class="base-layout"
+    >
       <div
         v-if="$slots.menu"
-        class="base-layout__menu"
+        class="base-layout__menu z-11"
       >
         <slot name="menu"></slot>
       </div>
