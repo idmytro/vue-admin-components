@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "3.4.3",
+  "version": "3.5.0",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
@@ -14,7 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "clean": "rm -rf dist",
-    "windicss": "./node_modules/.bin/windicss 'src/**/*.(js|vue)' -o src/windi.css -f windi.config.js"
+    "windicss": "./node_modules/.bin/windicss 'src/**/*.js' 'src/**/*.vue' -o src/windi.css -f windi.config.js"
   },
   "dependencies": {
     "element-ui": "^2.14.1",
@@ -44,7 +44,7 @@
     "react-is": "^16.13.1",
     "vue-template-compiler": "^2.6.11",
     "vue-windicss-preprocess": "^2.2.0",
-    "windicss": "^2.5.8",
+    "windicss": "^3.0.0",
     "windicss-webpack-plugin": "^0.3.2"
   }
 }
