@@ -47,8 +47,6 @@
   --size-text-h5: 14px;
   --size-text-huge: 56px;
 
-  --tracking-wide: 0.025em; /* https://tailwindcss.com/docs/letter-spacing */
-
   --transition-duration: 250ms;
   --transition-property-form-item: box-shadow, color, border-color, background-color, opacity;
 }

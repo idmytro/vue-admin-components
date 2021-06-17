@@ -7,7 +7,7 @@
 .secondary-button,
 .background-button {
   font-size: var(--size-text-menu);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: 0.025em;
   font-weight: bold;
   border-radius: 8px;
   padding-left: 16px;
