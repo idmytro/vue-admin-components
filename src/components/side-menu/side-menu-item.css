@@ -47,12 +47,22 @@
 }
 
 .side-menu-item--logo {
-  margin-top: 6px;
   height: 48px;
+  margin-right: 6px;
 }
 
 .side-menu-item--logo .side-menu-item__control {
   background-color: transparent;
+  width: auto;
+  text-decoration: none;
+}
+
+.side-menu-item--logo .side-menu-item__label {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 6px;
+  padding-left: 6px;
 }
 
 .side-menu-item--logo .side-menu-item__icon {
@@ -64,4 +74,19 @@
 
 .side-menu-item .el-tooltip {
   outline: 0;
+}
+
+@media (min-width: 1024px) {
+  .side-menu-item--logo {
+    margin-top: 6px;
+    margin-right: 0;
+  }
+
+  .side-menu-item--logo .side-menu-item__control {
+    width: 48px;
+  }
+
+  .side-menu-item__label {
+    display: none;
+  }
 }

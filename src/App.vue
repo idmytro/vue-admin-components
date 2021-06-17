@@ -3,7 +3,9 @@
     id="app"
     class="m-2px"
   >
-    APP
+    <router-link to="/">
+      ///
+    </router-link>
   </div>
 </template>
 

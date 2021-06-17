@@ -68,7 +68,7 @@
 
 <script>
 ((global) => {
-  global.components.SideMenu = Vue.component('SideMenu', {
+  global.components.SideMenu = global.Vue.component('SideMenu', {
     template: '#side-menu-item',
     props: {
       disabled: {

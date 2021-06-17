@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "3.5.3",
+  "version": "3.6.0",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
@@ -17,8 +17,9 @@
     "windicss": "./node_modules/.bin/windicss 'src/**/*.js' 'src/**/*.vue' -o src/windi.css -f windi.config.js"
   },
   "dependencies": {
-    "element-ui": "^2.14.1",
-    "vue": "^2.6.11"
+    "element-ui": "^2.15.2",
+    "vue": "^2.6.11",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

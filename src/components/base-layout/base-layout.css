@@ -22,6 +22,10 @@
   min-width: 0;
 }
 
+.base-layout__menu + .base-layout__main {
+  margin-top: var(--height-sidemenu);
+}
+
 @media (min-width: 1024px) {
   .base-layout__menu {
     height: auto;
@@ -31,6 +35,7 @@
   }
 
   .base-layout__menu + .base-layout__main {
+    margin-top: 0;
     margin-left: var(--width-sidemenu);
   }
 }
