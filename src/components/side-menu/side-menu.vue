@@ -10,7 +10,10 @@
       <slot></slot>
     </div>
 
-    <div class="side-menu__profile-cell">
+    <div
+      v-if="profile"
+      class="side-menu__profile-cell"
+    >
       <div class="side-menu__profile">
         <slot name="profile"></slot>
       </div>
@@ -40,8 +43,6 @@
         </svg>
       </side-menu-item>
     </form>
-
-    <!-- <side-menu-icons></side-menu-icons> -->
   </div>
 </template>
 
@@ -54,6 +55,10 @@ export default {
     label: {
       type: String,
       default: undefined,
+    },
+    profile: {
+      type: Boolean,
+      default: false,
     },
   },
 };
