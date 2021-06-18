@@ -47,10 +47,9 @@
 
 <script>
 import SideMenuItem from './side-menu-item.vue';
-import SideMenuIcons from './side-menu-icons.vue';
 
 export default {
-  components: { SideMenuItem, SideMenuIcons },
+  components: { SideMenuItem },
   props: {
     label: {
       type: String,

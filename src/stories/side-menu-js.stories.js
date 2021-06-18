@@ -1,10 +1,10 @@
-import { SideMenu, SideMenuItem } from '../../index';
+import { SideMenu, SideMenuItem } from '../../index-js';
 import { storiesOf } from '@storybook/vue';
 import StoryRouter from '../storybook/router';
 import '../element-ui';
 import router from '../router';
 
-storiesOf('Components/SideMenu', module)
+storiesOf('Components/SideMenu.js', module)
   .addDecorator(StoryRouter({}, router.options))
   .add('Default', () => ({
     components: { SideMenu },

@@ -3,66 +3,76 @@
     class="side-menu-item"
     :class="type && `side-menu-item--${type}`"
   >
-    <button
+    <el-tooltip
       v-if="type === 'exit'"
-      type="submit"
-      :aria-label="tooltip || label"
-      class="side-menu-item__control"
+      :disabled="!tooltip"
+      :content="tooltip"
+      effect="dark"
+      placement="right"
     >
-      <el-tooltip
-        :disabled="!tooltip"
-        :content="tooltip"
-        effect="dark"
-        placement="right"
+      <button
+        type="submit"
+        :aria-label="tooltip || label"
+        class="side-menu-item__control"
       >
         <span
+          v-if="svg"
           class="side-menu-item__icon"
           v-html="svg"
         ></span>
-      </el-tooltip>
-    </button>
+        <slot></slot>
+      </button>
+    </el-tooltip>
 
-    <a
+    <el-tooltip
       v-else-if="type === 'link' && !isDisabled"
-      :aria-label="tooltip || label"
-      :href="to"
-      target="_blank"
-      class="side-menu-item__control"
+      :disabled="!tooltip"
+      :content="tooltip"
+      effect="dark"
+      placement="right"
     >
-      <el-tooltip
-        :disabled="!tooltip"
-        :content="tooltip"
-        effect="dark"
-        placement="right"
+      <a
+        :aria-label="tooltip || label"
+        :href="to"
+        target="_blank"
+        class="side-menu-item__control"
       >
         <span
+          v-if="svg"
           class="side-menu-item__icon"
           v-html="svg"
         ></span>
-      </el-tooltip>
-    </a>
+        <slot></slot>
+      </a>
+    </el-tooltip>
 
-    <router-link
+    <el-tooltip
       v-else
-      :aria-label="tooltip || label"
-      :disabled="isDisabled"
-      :tag="computedTag"
-      :to="to"
-      class="side-menu-item__control"
+      :disabled="!tooltip"
+      :content="tooltip"
+      :tabindex="isDisabled ? -1 : 0"
+      effect="dark"
+      placement="right"
     >
-      <el-tooltip
-        :disabled="!tooltip"
-        :content="tooltip"
-        :tabindex="isDisabled ? -1 : 0"
-        effect="dark"
-        placement="right"
+      <router-link
+        :aria-label="tooltip || label"
+        :disabled="isDisabled"
+        :tag="computedTag"
+        :to="to || '/'"
+        class="side-menu-item__control"
       >
         <span
+          v-if="type === 'logo' || svg"
           class="side-menu-item__icon"
           v-html="svg"
         ></span>
-      </el-tooltip>
-    </router-link>
+        <slot></slot>
+        <span
+          v-if="type === 'logo'"
+          class="side-menu-item__label"
+        >{{ label }}</span>
+      </router-link>
+    </el-tooltip>
   </div>
 </template>
 
