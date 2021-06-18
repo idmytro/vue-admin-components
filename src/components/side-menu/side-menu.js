@@ -46,6 +46,12 @@ export default {
     </form>
   </div>
   `,
+  props: {
+    label: {
+      type: String,
+      default: undefined,
+    },
+  },
 };
 
 export { SideMenuItem };
