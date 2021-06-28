@@ -56,16 +56,12 @@ gulp.task('es-vue', () => {
     './src/components/**/*.es.vue',
   ])
     .pipe(removeHtmlComments())
-    // .pipe(tap(addHtmlHeader))
     .pipe(replace('\n<template', '<template'))
-    .pipe(replace(/\n\n/g, '\n'))
+    .pipe(replace('\n<script', '<script'))
+    .pipe(replace('\n<style', '<style'))
+    // .pipe(replace(/\n\n/g, '\n'))
     .pipe(rename((path) => {
-      console.log(path);
-
-      // Updates the object in-place
-      // path.dirname += '/ciao';
       path.basename = path.basename.replace('.es', '');
-      // path.extname = '.md';
     }))
     .pipe(gulp.dest('./dist-es/components'));
 });

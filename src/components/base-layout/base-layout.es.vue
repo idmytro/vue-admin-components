@@ -64,7 +64,7 @@ export default {
   left: 0;
   right: 0;
   height: var(--space-layout);
-  background-image: linear-gradient(var(--color-background), rgba(255,255,255,0));
+  background-image: linear-gradient(var(--color-background), rgba(255, 255, 255, 0));
 }
 
 .base-layout__body {
