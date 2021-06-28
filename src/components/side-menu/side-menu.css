@@ -4,13 +4,15 @@
 */
 
 .side-menu {
-  height: var(--height-sidemenu, 60px);
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: #2E384D;
   padding: 0 6px;
   box-sizing: border-box;
+  width: 72px;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 54px 1fr 72px 68px;
+  grid-gap: 6px;
 }
 
 .side-menu__list {
@@ -40,33 +42,23 @@
 }
 
 
-@media (min-width: 1024px) {
-  .side-menu {
-    width: 72px;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 54px 1fr 72px 68px;
-    grid-gap: 6px;
-    justify-content: unset;
-  }
-
-  .side-menu__list {
-    display: block;
-    height: calc(100vh - 54px - 68px - 72px - 12px - 6px);
-    overflow-y: auto;
-  }
-
-  .side-menu__list .side-menu-item {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-
-  .side-menu__profile-cell {
-    margin: 0;
-  }
-
-  .side-menu__profile {
-    width: 50px;
-    height: 50px;
-  }
+.side-menu__list {
+  display: block;
+  height: calc(100vh - 54px - 68px - 72px - 12px - 6px);
+  overflow-y: auto;
 }
+
+.side-menu__list .side-menu-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.side-menu__profile-cell {
+  margin: 0;
+}
+
+.side-menu__profile {
+  width: 50px;
+  height: 50px;
+}
+
