@@ -32,6 +32,7 @@
     "@vue-admin-ui/tailwindcss-config": "^1.0.2",
     "@vue/cli-service": "~4.5.0",
     "babel-loader": "^8.1.0",
+    "csscomb": "^4.3.0",
     "eslint": "^7.9.0",
     "eslint-config-semistandard": "^15.0.1",
     "eslint-config-standard": "^14.1.1",
