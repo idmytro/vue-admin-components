@@ -1,22 +1,24 @@
 import '../styles/base.css';
-import { BaseLayout, SideMenu } from '../..';
+import { BaseLayout } from '../..';
 
 export default {
   title: 'Components/base-layout',
   component: BaseLayout,
 };
 
-const components = { BaseLayout, SideMenu };
+const components = { BaseLayout };
 
 const MENU = `
 <template #menu>
-  <side-menu></side-menu>
-</template>`;
+  <div style="background: #2E384D; height: 100%"></div>
+</template>
+`;
 
 const HEADER = `
 <header class="base-layout__header">
   <div style="height: 60px; background-color: #fff;"></div>
-</header>`;
+</header>
+`;
 
 const CONTENT = '<div style="padding: 20px">Content</div>';
 

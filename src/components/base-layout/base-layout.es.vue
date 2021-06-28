@@ -1,3 +1,27 @@
+<!-- Нужен! template id="base-layout" -->
+<template id="base-layout">
+  <div class="base-layout">
+    <div
+      v-if="$slots.menu"
+      class="base-layout__menu z-11"
+    >
+      <slot name="menu"></slot>
+    </div>
+    <div class="base-layout__main">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<!-- Нужен! template: '#base-layout', -->
+<script>
+export default {
+  template: '#base-layout',
+};
+</script>
+
+<!-- Оригинал: base-layout.css -->
+<style>
 .base-layout {
   --width-sidemenu: 72px;
   --height-sidemenu: 60px;
@@ -27,8 +51,6 @@
   margin-left: var(--width-sidemenu);
 }
 
-
-
 .base-layout__header {
   position: sticky;
   top: 0;
@@ -53,3 +75,4 @@
 .base-layout .form-section:first-of-type {
   border-top-left-radius: var(--rounded-layout);
 }
+</style>

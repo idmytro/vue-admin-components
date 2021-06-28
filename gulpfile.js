@@ -1,7 +1,11 @@
+const { exec } = require('child_process');
+
 const gulp = require('gulp');
 const { watch } = require('gulp');
 const tap = require('gulp-tap');
-const { exec } = require('child_process');
+const removeHtmlComments = require('gulp-remove-html-comments');
+const replace = require('gulp-replace');
+const rename = require('gulp-rename');
 
 const { repository, version, scripts } = require('./package.json');
 const gitlabBlob = '/-/blob/';
@@ -45,6 +49,25 @@ gulp.task('legacy-vue', () => {
   ])
     .pipe(tap(addHtmlHeader))
     .pipe(gulp.dest('./dist/components'));
+});
+
+gulp.task('es-vue', () => {
+  return gulp.src([
+    './src/components/**/*.es.vue',
+  ])
+    .pipe(removeHtmlComments())
+    // .pipe(tap(addHtmlHeader))
+    .pipe(replace('\n<template', '<template'))
+    .pipe(replace(/\n\n/g, '\n'))
+    .pipe(rename((path) => {
+      console.log(path);
+
+      // Updates the object in-place
+      // path.dirname += '/ciao';
+      path.basename = path.basename.replace('.es', '');
+      // path.extname = '.md';
+    }))
+    .pipe(gulp.dest('./dist-es/components'));
 });
 
 gulp.task('legacy-mixins', () => {

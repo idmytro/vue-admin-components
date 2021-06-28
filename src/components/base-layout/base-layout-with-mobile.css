@@ -12,9 +12,9 @@
   position: fixed;
   left: 0;
   top: 0;
+  right: 0;
+  height: var(--height-sidemenu);
   overflow: hidden;
-  width: var(--width-sidemenu);
-  bottom: 0;
 }
 
 .base-layout__main {
@@ -23,13 +23,26 @@
 }
 
 .base-layout__menu + .base-layout__main {
-  margin-top: 0;
-  margin-left: var(--width-sidemenu);
+  margin-top: var(--height-sidemenu);
+}
+
+@media (min-width: 1024px) {
+  .base-layout__menu {
+    height: auto;
+    width: var(--width-sidemenu);
+    bottom: 0;
+    right: auto;
+  }
+
+  .base-layout__menu + .base-layout__main {
+    margin-top: 0;
+    margin-left: var(--width-sidemenu);
+  }
 }
 
 
-
 .base-layout__header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
