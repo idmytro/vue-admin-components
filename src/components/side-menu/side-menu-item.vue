@@ -93,7 +93,7 @@ export default {
     },
     to: {
       type: [String, Object],
-      default: null,
+      default: undefined,
     },
     tooltip: {
       type: String,
@@ -121,9 +121,4 @@ export default {
 };
 </script>
 
-          <style src="./side-menu-item.css"></style>
-        </span>
-      </router-link>
-    </el-tooltip>
-  </div>
-</template>
+<style src="./side-menu-item.css"></style>

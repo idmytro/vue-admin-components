@@ -4,11 +4,25 @@ import StoryRouter from '../storybook/router';
 import '../element-ui';
 import router from '../router';
 
+//         profileTooltip="flmdmfdlsml"
+
 storiesOf('Components/SideMenu', module)
   .addDecorator(StoryRouter({}, router.options))
   .add('Default', () => ({
     components: { SideMenu },
-    template: '<side-menu></side-menu>',
+    template: `
+      <side-menu></side-menu>
+    `,
+  }))
+  .add('With Profile', () => ({
+    components: { SideMenu },
+    template: `
+      <side-menu
+        profile-avatar="//avatars.mds.yandex.net/get-yapic/0/0-0/islands-200"
+        :profile-tooltip="[1,2,3]"
+      >
+      </side-menu>
+    `,
   }))
   .add('With Menu', () => ({
     components: { SideMenu, SideMenuItem },

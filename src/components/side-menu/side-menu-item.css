@@ -38,7 +38,7 @@
 }
 
 .side-menu-item__control[disabled] {
-  opacity: .5;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -48,7 +48,7 @@
 
 .side-menu-item--logo {
   height: 48px;
-  margin-right: 6px;
+  /* margin-right: 6px; */
 }
 
 .side-menu-item--logo .side-menu-item__control {
@@ -58,7 +58,7 @@
 }
 
 .side-menu-item--logo .side-menu-item__label {
-  color: #fff;
+  color: #FFF;
   font-size: 32px;
   font-weight: bold;
   padding-bottom: 6px;
@@ -78,7 +78,7 @@
 
 @media (min-width: 1024px) {
   .side-menu-item--logo {
-    margin-top: 6px;
+    /* margin-top: 6px; */
     margin-right: 0;
   }
 

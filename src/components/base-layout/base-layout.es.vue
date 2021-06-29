@@ -1,4 +1,4 @@
-<!-- Нужен! template id="base-layout" -->
+<!-- Нужен! template id="base-layout", Оригинал: base-layout.vue -->
 <template id="base-layout">
   <div class="base-layout">
     <div
@@ -34,11 +34,11 @@ export default {
 
 .base-layout__menu {
   position: fixed;
-  left: 0;
   top: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   width: var(--width-sidemenu);
-  bottom: 0;
 }
 
 .base-layout__main {
@@ -53,23 +53,23 @@ export default {
 
 .base-layout__header {
   position: sticky;
-  top: 0;
   z-index: 10;
+  top: 0;
 }
 
 .base-layout__header::after {
   content: "";
   position: absolute;
   top: 100%;
-  left: 0;
   right: 0;
+  left: 0;
   height: var(--space-layout);
-  background-image: linear-gradient(var(--color-background), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(var(--color-background), rgba(255,255,255,0));
 }
 
 .base-layout__body {
-  padding-left: var(--space-layout);
   padding-top: var(--space-layout);
+  padding-left: var(--space-layout);
 }
 
 .base-layout .form-section:first-of-type {

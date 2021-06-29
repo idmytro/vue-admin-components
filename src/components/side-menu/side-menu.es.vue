@@ -1,6 +1,6 @@
-<template>
+<!-- Нужен! template id="side-menu", Оригинал: side-menu.vue -->
+<template id="side-menu">
   <div
-    data-here
     :class="[
       'side-menu',
       profileAvatar && 'side-menu--with-profile'
@@ -74,10 +74,12 @@
   </div>
 </template>
 
+<!-- Нужен! template: '#side-menu', -->
 <script>
 import SideMenuItem from './side-menu-item.vue';
 
 export default {
+  template: '#side-menu',
   components: { SideMenuItem },
   props: {
     label: {
@@ -96,4 +98,7 @@ export default {
 };
 </script>
 
-<style src="./side-menu.css"></style>
+<!-- Оригинал: side-menu.css -->
+<style>
+
+</style>

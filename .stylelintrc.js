@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "stylelint-config-standard",
+  extends: 'stylelint-config-standard',
   rules: {
     'font-family-no-missing-generic-family-keyword': [
       true,
@@ -14,6 +14,7 @@ module.exports = {
     'comment-empty-line-before': [
       'always',
       {ignoreComments: ["/./"]}
-    ]
+    ],
+    'function-comma-space-after': null
   }
 }
