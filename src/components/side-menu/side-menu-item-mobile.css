@@ -75,6 +75,16 @@
   outline: 0;
 }
 
-.side-menu-item__label {
-  display: none;
+@media (min-width: 1024px) {
+  .side-menu-item--logo {
+    margin-right: 0;
+  }
+
+  .side-menu-item--logo .side-menu-item__control {
+    width: 48px;
+  }
+
+  .side-menu-item__label {
+    display: none;
+  }
 }

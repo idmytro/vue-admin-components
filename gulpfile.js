@@ -43,7 +43,7 @@ function addHeader (file) {
   ]);
 }
 
-gulp.task('legacy-vue', () => {
+gulp.task('vue-legacy', () => {
   return gulp.src([
     './src/components/**/*.legacy.vue',
   ])
@@ -51,7 +51,7 @@ gulp.task('legacy-vue', () => {
     .pipe(gulp.dest('./dist/components'));
 });
 
-gulp.task('es-vue', () => {
+gulp.task('vue-es', () => {
   return gulp.src([
     './src/components/**/*.es.vue',
   ])
@@ -96,4 +96,4 @@ const watchFiles = () => watch(paths.content, runWindiCSS);
 
 exports.watch = watchFiles;
 
-gulp.task('default', gulp.parallel('legacy-vue', 'legacy-mixins', 'css'));
+gulp.task('default', gulp.parallel('vue-legacy', 'legacy-mixins', 'css'));

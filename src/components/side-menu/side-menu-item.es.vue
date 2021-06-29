@@ -1,4 +1,5 @@
-<template>
+<!-- Нужен! template id="side-menu-item", Оригинал: side-menu-item.vue -->
+<template id="side-menu-item">
   <div
     class="side-menu-item"
     :class="type && `side-menu-item--${type}`"
@@ -63,8 +64,10 @@
   </div>
 </template>
 
+<!-- Нужен! template: '#side-menu-item', -->
 <script>
 export default {
+  template: '#side-menu-item',
   props: {
     disabled: {
       type: Boolean,
@@ -116,4 +119,87 @@ export default {
 };
 </script>
 
-<style src="./side-menu-item.css"></style>
+<!-- Оригинал: side-menu-item.css -->
+<style>
+.side-menu-item {
+  --box-shadow-focus: 0 0 0 3px rgba(61,76,102,0.5);
+  --logo-url: url('../../assets/logo.png');
+}
+
+.side-menu-item,
+.side-menu-item__control,
+.side-menu-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu-item__control {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
+
+.side-menu-item__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.side-menu-item__control:hover,
+.side-menu-item__control.router-link-active {
+  background-color: var(--color-side-menu-item);
+}
+
+.side-menu-item__control:focus {
+  outline: 0;
+  box-shadow: var(--box-shadow-focus);
+}
+
+.side-menu-item__control[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.side-menu-item:hover .side-menu-item__control[disabled] {
+  background-color: transparent;
+}
+
+.side-menu-item--logo {
+  height: 48px;
+}
+
+.side-menu-item--logo .side-menu-item__control {
+  width: auto;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.side-menu-item--logo .side-menu-item__label {
+  padding-bottom: 6px;
+  padding-left: 6px;
+  color: #FFF;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.side-menu-item--logo .side-menu-item__icon {
+  width: 48px;
+  height: 48px;
+  background-image: var(--logo-url);
+  background-size: contain;
+}
+
+.side-menu-item .el-tooltip {
+  outline: 0;
+}
+
+.side-menu-item__label {
+  display: none;
+}
+
+</style>

@@ -2,14 +2,13 @@
   --gap: 6px;
 
   display: grid;
+  grid-gap: var(--gap);
+  grid-template-rows: 60px 1fr 60px;
   align-items: center;
-  box-sizing: border-box;
   width: 72px;
   min-height: 100vh;
   padding: 0 6px 16px;
   background-color: #2E384D;
-  grid-template-rows: 60px 1fr 60px;
-  grid-gap: var(--gap);
 }
 
 .side-menu--with-profile {

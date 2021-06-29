@@ -1,16 +1,20 @@
 <template>
   <div
-    data-here
     :class="[
       'side-menu',
       profileAvatar && 'side-menu--with-profile'
     ]"
   >
     <div class="side-menu__logo-cell">
+      <slot
+        v-if="$slots.logo"
+        name="logo"
+      ></slot>
       <side-menu-item
+        v-else
         type="logo"
         to="/"
-        :label="label"
+        v-bind="{label, logoUrl}"
       ></side-menu-item>
     </div>
 
@@ -78,9 +82,14 @@
 import SideMenuItem from './side-menu-item.vue';
 
 export default {
+  name: 'SideMenu',
   components: { SideMenuItem },
   props: {
     label: {
+      type: String,
+      default: undefined,
+    },
+    logoUrl: {
       type: String,
       default: undefined,
     },

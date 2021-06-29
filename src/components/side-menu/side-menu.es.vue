@@ -7,10 +7,15 @@
     ]"
   >
     <div class="side-menu__logo-cell">
+      <slot
+        v-if="$slots.logo"
+        name="logo"
+      ></slot>
       <side-menu-item
+        v-else
         type="logo"
         to="/"
-        :label="label"
+        v-bind="{label, logoUrl}"
       ></side-menu-item>
     </div>
 
@@ -79,10 +84,15 @@
 import SideMenuItem from './side-menu-item.vue';
 
 export default {
+  name: 'SideMenu',
   template: '#side-menu',
   components: { SideMenuItem },
   props: {
     label: {
+      type: String,
+      default: undefined,
+    },
+    logoUrl: {
       type: String,
       default: undefined,
     },
@@ -100,5 +110,56 @@ export default {
 
 <!-- Оригинал: side-menu.css -->
 <style>
+.side-menu {
+  --gap: 6px;
 
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-rows: 60px 1fr 60px;
+  align-items: center;
+  width: 72px;
+  min-height: 100vh;
+  padding: 0 6px 16px;
+  background-color: #2E384D;
+}
+
+.side-menu--with-profile {
+  grid-template-rows: 60px 1fr 60px 60px;
+}
+
+.side-menu__list {
+  display: block;
+  overflow-y: auto;
+  flex-grow: 1;
+  height: calc(100vh - 60px - var(--gap) - 60px - var(--gap) - 16px);
+}
+
+.side-menu--with-profile .side-menu__list {
+  height: calc(100vh - 60px - var(--gap) - 60px - var(--gap) - 60px - var(--gap) - 16px);
+}
+
+.side-menu__logo-cell,
+.side-menu__profile-cell,
+.side-menu__footer-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu__profile {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+.side-menu__profile > img {
+  width: 100%;
+  height: 100%;
+}
+
+.side-menu__list .side-menu-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
 </style>
