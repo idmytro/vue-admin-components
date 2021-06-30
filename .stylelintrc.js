@@ -10,7 +10,6 @@ module.exports = {
       'always',
       {ignoreAtRules: ['import']}
     ],
-    'color-hex-case': 'upper',
     'comment-empty-line-before': [
       'always',
       {ignoreComments: ["/./"]}
