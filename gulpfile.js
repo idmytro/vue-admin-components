@@ -63,6 +63,7 @@ gulp.task('vue-es', () => {
     .pipe(rename((path) => {
       path.basename = path.basename.replace('.es', '');
     }))
+    .pipe(tap(addHtmlHeader))
     .pipe(gulp.dest('./dist-es/components'));
 });
 
