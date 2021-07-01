@@ -1,4 +1,4 @@
-<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.3/src/components/base-layout/base-layout.vue -->
+<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.4/src/components/base-layout/base-layout.vue -->
 
 <template id="base-layout">
   <div class="base-layout">

@@ -1,4 +1,4 @@
-<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.3/src/components/side-menu/side-menu.vue -->
+<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.4/src/components/side-menu/side-menu.vue -->
 
 <template id="side-menu">
   <div
