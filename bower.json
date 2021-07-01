@@ -7,6 +7,17 @@
     "node_modules",
     "public",
     "src",
-    "storybook-example"
+    "storybook-example",
+
+    "bower.json",
+    "gulpfile.js",
+    "index-js.js",
+    "index.css",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "utils.css",
+    "vue.config.js",
+    "windi.config.js"
   ]
 }
