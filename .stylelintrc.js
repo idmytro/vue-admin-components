@@ -1,19 +1,6 @@
 module.exports = {
-  extends: 'stylelint-config-standard',
+  extends: '@vue-admin-ui/stylelint-config',
   rules: {
-    'font-family-no-missing-generic-family-keyword': [
-      true,
-      {ignoreFontFamilies: 'element-icons'}
-    ],
-    'no-descending-specificity': null,
-    'at-rule-empty-line-before': [
-      'always',
-      {ignoreAtRules: ['import']}
-    ],
-    'comment-empty-line-before': [
-      'always',
-      {ignoreComments: ["/./"]}
-    ],
-    'function-comma-space-after': null
+    // custom rules
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-ui-components",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Vue Admin UI Components",
   "main": "index.js",
   "author": "Dmytro Cisar <dmytro.cisar@gmail.com>",
@@ -29,6 +29,7 @@
     "@storybook/addon-links": "^6.1.2",
     "@storybook/vue": "6.1.2",
     "@vue-admin-ui/eslint-config": "^1.0.11",
+    "@vue-admin-ui/stylelint-config": "^1.0.0",
     "@vue-admin-ui/tailwindcss-config": "^1.0.2",
     "@vue/cli-service": "~4.5.0",
     "babel-loader": "^8.1.0",

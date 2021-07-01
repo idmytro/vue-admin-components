@@ -123,6 +123,7 @@ export default {
 <style>
 .side-menu-item {
   --box-shadow-focus: 0 0 0 3px rgba(61,76,102,0.5);
+  --color-hover: var(--color-side-menu-item, #3d4c66);
   --logo-url: url('../../assets/logo.png');
 }
 
@@ -152,7 +153,7 @@ export default {
 
 .side-menu-item__control:hover,
 .side-menu-item__control.router-link-active {
-  background-color: var(--color-side-menu-item);
+  background-color: var(--color-hover);
 }
 
 .side-menu-item__control:focus {
@@ -182,7 +183,7 @@ export default {
 .side-menu-item--logo .side-menu-item__label {
   padding-bottom: 6px;
   padding-left: 6px;
-  color: #FFF;
+  color: #fff;
   font-size: 32px;
   font-weight: bold;
 }
@@ -201,5 +202,4 @@ export default {
 .side-menu-item__label {
   display: none;
 }
-
 </style>
