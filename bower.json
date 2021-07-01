@@ -8,8 +8,6 @@
     "public",
     "src",
     "storybook-example",
-
-    "bower.json",
     "gulpfile.js",
     "index-js.js",
     "index.css",

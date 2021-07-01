@@ -1,4 +1,4 @@
-<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.4/src/components/layout-list/layout-list.vue -->
+<!-- https://gitlab.edadeal.yandex-team.ru/cisar/vue-admin-ui-components/-/blob/v4.0.6/src/components/layout-list/layout-list.vue -->
 
 <template id="layout-list">
   <div
